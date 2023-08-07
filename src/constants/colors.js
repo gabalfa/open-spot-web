@@ -1,0 +1,22 @@
+export const BACKGROUND_COLORS = {
+  BLACK: '#29272C',
+  BLANK: '#FFF',
+  BODY: '#F7F5FB',
+  TERTIARY: '#8B90A0',
+  DIVIDER: '#E9E9EB',
+  BRAND: '#1C1B1B',
+  ACTIVE: '#EEFEF1',
+}
+
+export const TEXT_COLORS = {
+  BLACK: '#29272C',
+  BLANK: '#FFF',
+  HEADER: '#F88178',
+  BODY: '#29272C',
+  TERTIARY: '#5F5D5D',
+  ERROR: '#BC001F',
+
+  INTERACTIVE: '#1370BC',
+  BLUE_SWITCH: '#81b0ff',
+  YELLOW_SWITCH: '#F3E462',
+}
