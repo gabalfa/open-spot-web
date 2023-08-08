@@ -388,7 +388,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   line-height: 25px;
 `,Tx=()=>{const{newSpot:e,setNewSpot:t}=jm();return R.jsxs(Rx,{children:[R.jsx(Ax,{id:"titleSelectPlan",children:"Add a new spot!"}),R.jsx(Ix,{children:Do.HEADER.FILTER_PLACEHOLDER}),R.jsx(bx,{apiKey:"AIzaSyByTcAtF6vQA95A7ojFpu7_u1qn0iNOhRY",selectProps:{value:e,onChange:t}})]})},Lx=K.div`
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 70%;
   text-align: center;
   height: 100%;
   width: 100%;
