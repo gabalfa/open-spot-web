@@ -6,12 +6,6 @@ export const GlobalContext = createContext()
 function useSpotsReducer() {
   const [state, dispatch] = useReducer(spotsReducer, spotstInitialState)
 
-  const loadFromSpots = (spots) =>
-    dispatch({
-      type: 'LOAD_FROM_SPOTS',
-      payload: spots,
-    })
-
   const addToSpots = (spot) =>
     dispatch({
       type: 'ADD_TO_SPOTS',
@@ -26,18 +20,17 @@ function useSpotsReducer() {
 
   const clearSpots = () => dispatch({ type: 'CLEAR_SPOTS' })
 
-  return { state, loadFromSpots, addToSpots, removeFromSpots, clearSpots }
+  return { state, addToSpots, removeFromSpots, clearSpots }
 }
 
 export function GlobalProvider({ children }) {
-  const { state, loadFromSpots, addToSpots, removeFromSpots, clearSpots } =
-    useSpotsReducer()
+  const { state, addToSpots, removeFromSpots, clearSpots } = useSpotsReducer()
 
   return (
     <GlobalContext.Provider
       value={{
         spots: state,
-        loadFromSpots,
+
         addToSpots,
         removeFromSpots,
         clearSpots,

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { TEXT_COLORS } from '../../constants/colors'
+import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
 
 export const SelectPlanContainer = styled.div`
   display: grid;
@@ -8,7 +8,6 @@ export const SelectPlanContainer = styled.div`
   height: 100%;
   width: 100%;
   @media screen and (min-width: 768px) {
-    grid-template-rows: 20% 10% 70%;
   }
 `
 
@@ -31,4 +30,9 @@ export const Description = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
+`
+
+export const AddImage = styled.img`
+  width: 40px;
+  height: 40px;
 `
