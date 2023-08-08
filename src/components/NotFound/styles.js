@@ -3,7 +3,7 @@ import { TEXT_COLORS } from '../../constants/colors'
 
 export const SelectPlanContainer = styled.div`
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 70%;
   text-align: center;
   height: 100%;
   width: 100%;
