@@ -16,7 +16,7 @@ import news from '../../assets/openspot-images/icons8-megaphone-48.png'
 export const OpenSpotBar = () => {
   return (
     <StepBarContainer>
-      <StepBarCard to="/frequent">
+      <StepBarCard to="/open-spot-web/frequent">
         {/* <LabelStep active={stage === 3 ? 'active' : 'no-active'}></LabelStep> */}
         <MenuImages src={frequent} alt="location" />
         <DescriptionCard>
@@ -24,7 +24,7 @@ export const OpenSpotBar = () => {
           <LabelDescriptionStep>FREQUENT PLACES</LabelDescriptionStep>
         </DescriptionCard>
       </StepBarCard>
-      <StepBarCard to="/sports">
+      <StepBarCard to="/open-spot-web/sports">
         {/* <LabelStep active={stage === 1 ? 'active' : 'no-active'}>1</LabelStep> */}
         <MenuImages src={sports} alt="sports" />
         <DescriptionCard>
@@ -32,7 +32,7 @@ export const OpenSpotBar = () => {
           <LabelDescriptionStep>WORKOUT</LabelDescriptionStep>
         </DescriptionCard>
       </StepBarCard>
-      <StepBarCard to="/chill">
+      <StepBarCard to="/open-spot-web/chill">
         {/* <LabelStep active={stage === 2 ? 'active' : 'no-active'}>2</LabelStep> */}
         <MenuImages src={chill} alt="chill" />
         <DescriptionCard>
@@ -40,7 +40,7 @@ export const OpenSpotBar = () => {
           <LabelDescriptionStep>PLACES TO CHILL</LabelDescriptionStep>
         </DescriptionCard>
       </StepBarCard>
-      <StepBarCard to="/news">
+      <StepBarCard to="/open-spot-web/news">
         {/* <LabelStep active={stage === 3 ? 'active' : 'no-active'}>3</LabelStep> */}
         <MenuImages src={news} alt="news" />
         <DescriptionCard>

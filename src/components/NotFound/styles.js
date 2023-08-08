@@ -3,11 +3,12 @@ import { TEXT_COLORS } from '../../constants/colors'
 
 export const SelectPlanContainer = styled.div`
   display: grid;
-
+  grid-template-rows: 50% 50%;
+  text-align: center;
   height: 100%;
   width: 100%;
+
   @media screen and (min-width: 768px) {
-    grid-template-rows: 20% 10% 70%;
   }
 `
 
@@ -30,4 +31,8 @@ export const Description = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
+`
+
+export const ImageWellcome = styled.img`
+  margin: 0 auto;
 `

@@ -14,13 +14,17 @@ export const BottomBarContainer = styled.div`
     padding: 10px 45px;
   }
 `
-export const GoBackButton = styled.button`
+export const GoBackButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--grey, #9699aa);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   border-radius: 8px;
+  text-decoration: none;
   width: 123px;
   height: 48px;
   border: none;
@@ -31,7 +35,7 @@ export const GoBackButton = styled.button`
 `
 
 export const NextStepButton = styled(Link)`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;

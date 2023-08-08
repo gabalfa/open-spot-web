@@ -16,11 +16,15 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route exact path="/frequent" element={<Frequent />} />
-            <Route exact path="/sports" element={<Sports />} />
-            <Route exact path="/chill" element={<Chill />} />
-            <Route exact path="/news" element={<News />} />
-            <Route exact path="/new-spot" element={<NewSpot />} />
+            <Route
+              exact
+              path="/open-spot-web/frequent"
+              element={<Frequent />}
+            />
+            <Route exact path="/open-spot-web/sports" element={<Sports />} />
+            <Route exact path="/open-spot-web/chill" element={<Chill />} />
+            <Route exact path="/open-spot-web/news" element={<News />} />
+            <Route exact path="/open-spot-web/new-spot" element={<NewSpot />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
