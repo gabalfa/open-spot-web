@@ -5,9 +5,10 @@ import { TEXT_COLORS } from '../../constants/colors'
 export const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 90%;
-  height: 50vh;
+  height: 65vh;
   width: 100%;
   @media screen and (min-width: 768px) {
+    height: 50vh;
   }
 `
 
