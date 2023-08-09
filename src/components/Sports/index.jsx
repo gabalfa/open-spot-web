@@ -1,6 +1,6 @@
 import { useSpots } from '../../hooks/useSpots'
 import {
-  SelectPlanContainer,
+  Container,
   Title,
   Description,
   CardsContainer,
@@ -19,22 +19,39 @@ export const Sports = () => {
   // console.log('currentWeather:::', currentWeather)
   // console.log('currentForecast:::', currentForecast)
   return (
-    <SelectPlanContainer>
+    <Container>
       <Title id="titleSelectPlan">{'Sports'}</Title>
       {/* <Description>{UI_TEXT_EN.HEADER.FILTER_PLACEHOLDER}</Description> */}
 
       <CardsContainer>
         {spots.map((item) => (
-          <Card key={item.guid} onClick={() => setCurrentSpot(item)}>
+          <Card
+            key={item.guid}
+            onClick={() => setCurrentSpot(item)}
+            selected={item.selected}
+          >
             <SpotContainer>
               <TitleSpot>{item.name}</TitleSpot>
               <DescriptionSpot>{item.description}</DescriptionSpot>
             </SpotContainer>
+            {item.selected ? (
+              <WeatherContainer>
+                <WeatherTitle>
+                  {currentWeather?.weather[0].description}
+                </WeatherTitle>
+                <WeatherTitle>
+                  {currentWeather?.celsiusTemperature}
+                </WeatherTitle>
+                <WeatherImages src={currentWeather?.image} alt="weather" />
+              </WeatherContainer>
+            ) : (
+              <></>
+            )}
           </Card>
         ))}
       </CardsContainer>
 
-      {currentWeather !== undefined ? (
+      {/* {currentWeather !== undefined ? (
         <WeatherContainer>
           <WeatherTitle>{currentWeather?.celsiusTemperature}</WeatherTitle>
           <WeatherTitle>{currentWeather?.weather[0].description}</WeatherTitle>
@@ -42,7 +59,7 @@ export const Sports = () => {
         </WeatherContainer>
       ) : (
         <></>
-      )}
-    </SelectPlanContainer>
+      )} */}
+    </Container>
   )
 }

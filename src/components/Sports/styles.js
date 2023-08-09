@@ -2,13 +2,12 @@ import styled from 'styled-components'
 
 import { TEXT_COLORS } from '../../constants/colors'
 
-export const SelectPlanContainer = styled.div`
+export const Container = styled.div`
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 80%;
   height: 100%;
   width: 100%;
   @media screen and (min-width: 768px) {
-    grid-template-rows: 20% 10% 70%;
   }
 `
 
@@ -34,29 +33,24 @@ export const Description = styled.label`
 `
 
 export const CardsContainer = styled.div`
-  display: grid;
-  height: 100%;
+  height: auto;
   width: 100%;
   overflow: scroll;
 `
 
 export const Card = styled.div`
+  background-color: #fff;
   display: grid;
-  /* grid-template-columns: 10% 70% 20%; */
-
+  /* transition: height 500ms ease-in-out; */
   &:hover {
-    border: 1px solid #483eff;
+    border-bottom: 1px solid ${TEXT_COLORS.HEADER};
   }
-  border: ${(props) =>
-    props.active === 'active' ? '1px solid #483eff' : '1px solid #d6d9e6'};
+  border-bottom: ${(props) =>
+    props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
 
-  background-color: ${(props) =>
-    props.active === 'active' ? '#F8F9FF' : '#fff'};
-
-  height: 20px;
   margin: 10px;
   padding: 10px;
-  border-radius: 8px;
+  height: ${(props) => (props.selected ? '100px' : '10px')};
   align-items: center;
 `
 
@@ -65,12 +59,15 @@ export const SpotContainer = styled.div`
 `
 
 export const TitleSpot = styled.label`
-  color: var(--denim, #022959);
-  font-family: Ubuntu;
-  font-size: 16px;
+  color: ${TEXT_COLORS.HEADER};
+  font-family: Roboto;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
 `
 
 export const DescriptionSpot = styled.label`
@@ -82,11 +79,13 @@ export const DescriptionSpot = styled.label`
   line-height: 20px;
 `
 
-export const WeatherContainer = styled.div``
+export const WeatherContainer = styled.div`
+  display: grid;
+`
 
 export const WeatherTitle = styled.div`
   align-self: 'center';
-  color: ${TEXT_COLORS.BLANK};
+  color: ${TEXT_COLORS.BLACK};
   font-size: 16;
   font-weight: '600';
 `

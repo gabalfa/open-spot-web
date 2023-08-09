@@ -6,6 +6,11 @@ export const GlobalContext = createContext()
 function useSpotsReducer() {
   const [state, dispatch] = useReducer(spotsReducer, spotstInitialState)
 
+  const resetSelectedSpots = () =>
+    dispatch({
+      type: 'RESET_SELECTED_SPOT',
+    })
+
   const addToSpots = (spot) =>
     dispatch({
       type: 'ADD_TO_SPOTS',
@@ -20,11 +25,31 @@ function useSpotsReducer() {
 
   const clearSpots = () => dispatch({ type: 'CLEAR_SPOTS' })
 
-  return { state, addToSpots, removeFromSpots, clearSpots }
+  const setSelectedSpot = (guid) =>
+    dispatch({
+      type: 'SET_SELECTED_SPOT',
+      payload: guid,
+    })
+
+  return {
+    state,
+    addToSpots,
+    removeFromSpots,
+    clearSpots,
+    setSelectedSpot,
+    resetSelectedSpots,
+  }
 }
 
 export function GlobalProvider({ children }) {
-  const { state, addToSpots, removeFromSpots, clearSpots } = useSpotsReducer()
+  const {
+    state,
+    addToSpots,
+    removeFromSpots,
+    clearSpots,
+    setSelectedSpot,
+    resetSelectedSpots,
+  } = useSpotsReducer()
 
   return (
     <GlobalContext.Provider
@@ -34,6 +59,8 @@ export function GlobalProvider({ children }) {
         addToSpots,
         removeFromSpots,
         clearSpots,
+        setSelectedSpot,
+        resetSelectedSpots,
       }}
     >
       {children}

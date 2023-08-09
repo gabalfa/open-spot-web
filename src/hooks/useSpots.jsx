@@ -8,7 +8,7 @@ export function useSpots() {
 
   const context = useContext(GlobalContext)
 
-  const { addToSpots } = context
+  const { spots, addToSpots, setSelectedSpot, resetSelectedSpots } = context
 
   const [newSpot, setNewSpot] = useState(null)
 
@@ -29,21 +29,26 @@ export function useSpots() {
             latitude: lat,
             longitude: lng,
           },
+          selected: false,
           type: 'sport',
         })
       })
   }
 
+  useEffect(() => resetSelectedSpots, [])
+
   useEffect(() => {
     if (currentSpot !== undefined) {
-      const { location } = currentSpot
+      setSelectedSpot(currentSpot)
       fetch(
-        `${URL_WEATHER}/data/2.5/weather?lat=${location?.latitude}&lon=${
-          location?.longitude
-        }&appid=${import.meta.env.VITE_API_KEY_WEATHER}&lang=${'en'}`
+        `${URL_WEATHER}/data/2.5/weather?lat=${
+          currentSpot?.location.latitude
+        }&lon=${currentSpot?.location.longitude}&appid=${
+          import.meta.env.VITE_API_KEY_WEATHER
+        }&lang=${'en'}`
       )
         .then((response) => response.json())
-        .then((json) =>
+        .then((json) => {
           setCurrentWeather({
             ...json,
             celsiusTemperature: `${Math.round(
@@ -51,12 +56,14 @@ export function useSpots() {
             )}°C`,
             image: `${URL_WEATHER_IMG}/img/wn/${json.weather[0].icon}@4x.png`,
           })
-        )
+        })
 
       fetch(
-        `${URL_WEATHER}/data/2.5/forecast?lat=${location?.latitude}&lon=${
-          location?.longitude
-        }&appid=${import.meta.env.VITE_API_KEY_WEATHER}&lang=${'en'}`
+        `${URL_WEATHER}/data/2.5/forecast?lat=${
+          currentSpot?.location.latitude
+        }&lon=${currentSpot?.location.longitude}&appid=${
+          import.meta.env.VITE_API_KEY_WEATHER
+        }&lang=${'en'}`
       )
         .then((response) => response.json())
         .then((json) => setCurrentForecacst(json))
