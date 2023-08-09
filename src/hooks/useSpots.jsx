@@ -89,5 +89,6 @@ export function useSpots() {
     setNewSpot,
     handleAddSpot,
     setCurrentSpot,
+    resetSelectedSpots,
   }
 }

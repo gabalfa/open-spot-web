@@ -47,6 +47,7 @@ const UPDATE_STATE_BY_ACTION = {
     return newState
   },
   [SPOTS_ACTION_TYPES.RESET_SELECTED_SPOT]: (state) => {
+    console.log('currentWeather:::')
     const newState = state.map((spot) => {
       return { ...spot, selected: false }
     })

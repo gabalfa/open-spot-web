@@ -23,8 +23,14 @@ export const Sports = () => {
     setCurrentSpot,
     currentWeather,
     currentForecast,
+    resetSelectedSpots,
   } = useSpots()
-  console.log('currentSpot:::', currentSpot)
+
+  const resetSelected = () => {
+    if (currentWeather === undefined) {
+      resetSelectedSpots()
+    }
+  }
   // console.log('currentWeather:::', currentWeather)
   // console.log('currentForecast:::', currentForecast)
   return (
