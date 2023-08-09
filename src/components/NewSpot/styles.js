@@ -4,8 +4,8 @@ import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
 
 export const SelectPlanContainer = styled.div`
   display: grid;
-
-  height: 100%;
+  grid-template-rows: 20% 20% 10% 40% 10%;
+  height: 70%;
   width: 100%;
   @media screen and (min-width: 768px) {
   }
@@ -20,6 +20,15 @@ export const Title = styled.label`
   font-weight: 700;
   line-height: normal;
   transition: color 1s ease;
+`
+
+export const AutocompleteContainer = styled.div`
+  /* display: grid;
+  grid-template-rows: 20% 80%; */
+  height: 50px;
+  /* width: 100%; */
+  @media screen and (min-width: 768px) {
+  }
 `
 
 export const Description = styled.label`

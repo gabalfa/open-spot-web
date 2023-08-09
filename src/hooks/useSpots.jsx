@@ -19,20 +19,30 @@ export function useSpots() {
   const [currentForecast, setCurrentForecacst] = useState(undefined)
 
   const handleAddSpot = () => {
-    geocodeByAddress(newSpot?.label)
-      .then((results) => getLatLng(results[0]))
-      .then(({ lat, lng }) => {
-        addToSpots({
-          guid: newSpot.value.place_id,
-          name: newSpot.value.structured_formatting.main_text.toUpperCase(),
-          location: {
-            latitude: lat,
-            longitude: lng,
-          },
-          selected: false,
-          type: 'sport',
-        })
+    geocodeByAddress(newSpot?.label).then(async (results) => {
+      const { lat, lng } = await getLatLng(results[0])
+      addToSpots({
+        guid: newSpot.value.place_id,
+        name: newSpot.value.structured_formatting.main_text.toUpperCase(),
+        location: {
+          latitude: lat,
+          longitude: lng,
+        },
+        country:
+          results[0].address_components[
+            results[0].address_components.length - 2
+          ].long_name,
+        state:
+          results[0].address_components[
+            results[0].address_components.length - 3
+          ].long_name,
+        city: results[0].address_components[
+          results[0].address_components.length - 4
+        ].long_name,
+        selected: false,
+        type: 'sport',
       })
+    })
   }
 
   useEffect(() => resetSelectedSpots, [])
@@ -73,6 +83,7 @@ export function useSpots() {
   return {
     ...context,
     newSpot,
+    currentSpot,
     currentWeather,
     currentForecast,
     setNewSpot,

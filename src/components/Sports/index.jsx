@@ -5,24 +5,31 @@ import {
   Description,
   CardsContainer,
   Card,
+  DetailContainer,
   SpotContainer,
   TitleSpot,
   DescriptionSpot,
   WeatherContainer,
   WeatherTitle,
+  Temperature,
   WeatherImages,
 } from './styles'
 import { UI_TEXT_EN } from '../../constants/uiTexts'
 
 export const Sports = () => {
-  const { spots, setCurrentSpot, currentWeather, currentForecast } = useSpots()
+  const {
+    spots,
+    currentSpot,
+    setCurrentSpot,
+    currentWeather,
+    currentForecast,
+  } = useSpots()
+  console.log('currentSpot:::', currentSpot)
   // console.log('currentWeather:::', currentWeather)
   // console.log('currentForecast:::', currentForecast)
   return (
     <Container>
-      <Title id="titleSelectPlan">{'Sports'}</Title>
-      {/* <Description>{UI_TEXT_EN.HEADER.FILTER_PLACEHOLDER}</Description> */}
-
+      <Title id="titleSelectPlan">{'Spots'}</Title>
       <CardsContainer>
         {spots.map((item) => (
           <Card
@@ -32,34 +39,28 @@ export const Sports = () => {
           >
             <SpotContainer>
               <TitleSpot>{item.name}</TitleSpot>
-              <DescriptionSpot>{item.description}</DescriptionSpot>
+              <DescriptionSpot>{`${item.country} / ${item.city}`}</DescriptionSpot>
             </SpotContainer>
             {item.selected ? (
-              <WeatherContainer>
-                <WeatherTitle>
-                  {currentWeather?.weather[0].description}
-                </WeatherTitle>
-                <WeatherTitle>
-                  {currentWeather?.celsiusTemperature}
-                </WeatherTitle>
-                <WeatherImages src={currentWeather?.image} alt="weather" />
-              </WeatherContainer>
+              <DetailContainer>
+                <WeatherContainer>
+                  <Temperature>
+                    {currentWeather?.celsiusTemperature}
+                  </Temperature>
+                </WeatherContainer>
+                <WeatherContainer>
+                  <WeatherImages src={currentWeather?.image} alt="weather" />
+                  <WeatherTitle>
+                    {currentWeather?.weather[0].description}
+                  </WeatherTitle>
+                </WeatherContainer>
+              </DetailContainer>
             ) : (
               <></>
             )}
           </Card>
         ))}
       </CardsContainer>
-
-      {/* {currentWeather !== undefined ? (
-        <WeatherContainer>
-          <WeatherTitle>{currentWeather?.celsiusTemperature}</WeatherTitle>
-          <WeatherTitle>{currentWeather?.weather[0].description}</WeatherTitle>
-          <WeatherImages src={currentWeather?.image} alt="weather" />
-        </WeatherContainer>
-      ) : (
-        <></>
-      )} */}
     </Container>
   )
 }

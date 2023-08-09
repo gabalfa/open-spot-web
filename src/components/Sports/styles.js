@@ -4,8 +4,8 @@ import { TEXT_COLORS } from '../../constants/colors'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-rows: 10% 80%;
-  height: 100%;
+  grid-template-rows: 10% 90%;
+  height: 50vh;
   width: 100%;
   @media screen and (min-width: 768px) {
   }
@@ -40,7 +40,7 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   background-color: #fff;
-  display: grid;
+
   /* transition: height 500ms ease-in-out; */
   &:hover {
     border-bottom: 1px solid ${TEXT_COLORS.HEADER};
@@ -48,13 +48,12 @@ export const Card = styled.div`
   border-bottom: ${(props) =>
     props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
 
-  margin: 10px;
   padding: 10px;
-  height: ${(props) => (props.selected ? '100px' : '10px')};
-  align-items: center;
+  height: ${(props) => (props.selected ? '120px' : '30px')};
 `
 
 export const SpotContainer = styled.div`
+  margin-bottom: 10px;
   display: grid;
 `
 
@@ -72,25 +71,38 @@ export const TitleSpot = styled.label`
 
 export const DescriptionSpot = styled.label`
   color: var(--grey, #9699aa);
-  font-family: Ubuntu;
-  font-size: 15px;
+  font-family: Roboto;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+`
+export const DetailContainer = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
 `
 
 export const WeatherContainer = styled.div`
   display: grid;
 `
 
-export const WeatherTitle = styled.div`
-  align-self: 'center';
-  color: ${TEXT_COLORS.BLACK};
-  font-size: 16;
+export const Temperature = styled.label`
+  font-family: Roboto;
+  color: var(--grey, #9699aa);
+  font-size: 64px;
   font-weight: '600';
 `
 
+export const WeatherTitle = styled.label`
+  font-family: Roboto;
+  align-self: 'center';
+  color: var(--grey, #9699aa);
+  font-size: 14px;
+  font-weight: '600';
+  text-transform: capitalize;
+`
+
 export const WeatherImages = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 `

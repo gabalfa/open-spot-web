@@ -26,13 +26,11 @@ export const StepBarContainer = styled.div`
 `
 
 export const StepBarCard = styled(Link)`
-  @media screen and (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 30px;
-    width: 120px;
-    text-decoration: none;
-  }
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 30px;
+  width: 120px;
+  text-decoration: none;
 `
 
 export const LabelStep = styled.label`
@@ -48,7 +46,8 @@ export const LabelStep = styled.label`
 `
 
 export const DescriptionCard = styled.div`
-  display: none;
+  display: grid;
+  width: 200px;
   @media screen and (min-width: 768px) {
     display: grid;
     width: 200px;
