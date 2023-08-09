@@ -365,7 +365,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,Ox=z.img`
   width: 60px;
   height: 60px;
-`,Px=()=>{const{spots:e,currentSpot:t,setCurrentSpot:n,currentWeather:r,currentForecast:o}=xg();return console.log("currentSpot:::",t),R.jsxs(mx,{children:[R.jsx(gx,{id:"titleSelectPlan",children:"Spots"}),R.jsx(vx,{children:e.map(i=>R.jsxs(yx,{onClick:()=>n(i),selected:i.selected,children:[R.jsxs(wx,{children:[R.jsx(Sx,{children:i.name}),R.jsx(xx,{children:`${i.country} / ${i.city}`})]}),i.selected?R.jsxs(Ex,{children:[R.jsx($d,{children:R.jsx(Cx,{children:r==null?void 0:r.celsiusTemperature})}),R.jsxs($d,{children:[R.jsx(Ox,{src:r==null?void 0:r.image,alt:"weather"}),R.jsx(kx,{children:r==null?void 0:r.weather[0].description})]})]}):R.jsx(R.Fragment,{})]},i.guid))})]})},bx=z.div`
+`,Px=()=>{const{spots:e,currentSpot:t,setCurrentSpot:n,currentWeather:r,currentForecast:o}=xg();return console.log("currentSpot:::",t),R.jsxs(mx,{children:[R.jsx(gx,{id:"titleSelectPlan",children:"Spots"}),R.jsx(vx,{children:e.map(i=>R.jsxs(yx,{onClick:()=>n(i),selected:i.selected,children:[R.jsxs(wx,{children:[R.jsx(Sx,{children:i.name}),R.jsx(xx,{children:`${i.country} / ${i.city}`})]}),i.selected&&r!==void 0?R.jsxs(Ex,{children:[R.jsx($d,{children:R.jsx(Cx,{children:r==null?void 0:r.celsiusTemperature})}),R.jsxs($d,{children:[R.jsx(Ox,{src:r==null?void 0:r.image,alt:"weather"}),R.jsx(kx,{children:r==null?void 0:r.weather[0].description})]})]}):R.jsx(R.Fragment,{})]},i.guid))})]})},bx=z.div`
   display: grid;
 
   height: 100%;
