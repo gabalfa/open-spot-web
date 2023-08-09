@@ -41,7 +41,7 @@ export const Sports = () => {
               <TitleSpot>{item.name}</TitleSpot>
               <DescriptionSpot>{`${item.country} / ${item.city}`}</DescriptionSpot>
             </SpotContainer>
-            {item.selected ? (
+            {item.selected && currentWeather !== undefined ? (
               <DetailContainer>
                 <WeatherContainer>
                   <Temperature>
