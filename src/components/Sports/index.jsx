@@ -10,6 +10,7 @@ import {
   SpotContainerColumnsB,
   TitleSpot,
   DescriptionSpot,
+  TemperatureContainer,
   WeatherContainer,
   MapsContainer,
   WeatherTitle,
@@ -17,13 +18,14 @@ import {
   WeatherImages,
   ArrowImages,
   OpenWithImages,
+  Anchor,
 } from './styles'
 import { UI_TEXT_EN } from '../../constants/uiTexts'
 
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
 import leftArrow from '../../assets/openspot-images/icons8-double-left-48.png'
-import waze from '../../assets/openspot-images/icons8-waze-100.png'
-import maps from '../../assets/openspot-images/icons8-google-maps-50.png'
+import waze from '../../assets/openspot-images/icons8-waze-48.png'
+import maps from '../../assets/openspot-images/icons8-map-marker-48.png'
 
 export const Sports = () => {
   const {
@@ -67,11 +69,11 @@ export const Sports = () => {
             </SpotContainer>
             {item.selected && currentWeather !== undefined ? (
               <DetailContainer>
-                <WeatherContainer>
+                <TemperatureContainer>
                   <Temperature>
                     {currentWeather?.celsiusTemperature}
                   </Temperature>
-                </WeatherContainer>
+                </TemperatureContainer>
                 <WeatherContainer>
                   <WeatherImages src={currentWeather?.image} alt="weather" />
                   <WeatherTitle>
@@ -79,20 +81,22 @@ export const Sports = () => {
                   </WeatherTitle>
                 </WeatherContainer>
                 <MapsContainer>
-                  <a
+                  <Anchor
                     target="_blank"
                     rel="noopener"
                     href={`https://www.google.com/maps?q=${item?.location.latitude},${item?.location.longitude}`}
                   >
                     <OpenWithImages src={maps} alt="maps" />
-                  </a>
-                  <a
+                    Maps
+                  </Anchor>
+                  <Anchor
                     target="_blank"
                     rel="noopener"
                     href={`https://www.waze.com/ul?ll=${item?.location.latitude},${item?.location.longitude}&navigate=yes`}
                   >
                     <OpenWithImages src={waze} alt="waze"></OpenWithImages>
-                  </a>
+                    Waze
+                  </Anchor>
                 </MapsContainer>
               </DetailContainer>
             ) : (

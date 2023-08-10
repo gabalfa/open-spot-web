@@ -92,13 +92,21 @@ export const DetailContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
 `
 
+export const TemperatureContainer = styled.div`
+  padding: 5px;
+`
+
 export const WeatherContainer = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
 export const MapsContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  padding: 15px;
+  text-align: center;
 `
 
 export const Temperature = styled.label`
@@ -112,7 +120,7 @@ export const WeatherTitle = styled.label`
   font-family: Roboto;
   align-self: 'center';
   color: var(--grey, #9699aa);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: '600';
   text-transform: capitalize;
 `
@@ -130,4 +138,9 @@ export const ArrowImages = styled.img`
 export const OpenWithImages = styled.img`
   width: 40px;
   height: 40px;
+`
+export const Anchor = styled.a`
+  color: var(--grey, #9699aa);
+  font-size: 12px;
+  text-decoration: none;
 `
