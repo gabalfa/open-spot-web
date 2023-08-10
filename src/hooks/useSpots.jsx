@@ -1,5 +1,6 @@
 import { useContext, useEffect, useCallback, useState } from 'react'
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
+
 import { GlobalContext } from '../context/Global'
 
 export function useSpots() {
@@ -45,7 +46,10 @@ export function useSpots() {
     })
   }
 
-  useEffect(() => resetSelectedSpots, [])
+  useEffect(() => {
+    // if (spots.length < 1) window.location.href = '/open-spot-web/new-spot'
+    resetSelectedSpots()
+  }, [])
 
   useEffect(() => {
     if (currentSpot !== undefined) {
@@ -63,7 +67,7 @@ export function useSpots() {
             ...json,
             celsiusTemperature: `${Math.round(
               parseFloat(json.main.temp) - 273.15
-            )}°C`,
+            )}°`,
             image: `${URL_WEATHER_IMG}/img/wn/${json.weather[0].icon}@4x.png`,
           })
         })

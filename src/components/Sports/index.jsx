@@ -23,7 +23,7 @@ import { UI_TEXT_EN } from '../../constants/uiTexts'
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
 import leftArrow from '../../assets/openspot-images/icons8-double-left-48.png'
 import waze from '../../assets/openspot-images/icons8-waze-100.png'
-import maps from '../../assets/openspot-images/icons8-google-maps-48.png'
+import maps from '../../assets/openspot-images/icons8-google-maps-50.png'
 
 export const Sports = () => {
   const {
@@ -36,6 +36,7 @@ export const Sports = () => {
   } = useSpots()
 
   const resetSelected = () => {
+    console.log('hola')
     if (currentWeather === undefined) {
       resetSelectedSpots()
     }

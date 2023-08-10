@@ -1,7 +1,12 @@
 export const UI_TEXT_EN = {
+  WELLCOME: {
+    DESCRIPTION:
+      'Here, we can save our favorite places to work out, chill, or engage in any relaxing activity. When saved, we will display the weather and temperature for you. Additionally, we provide shortcuts to navigate using Google Maps and Waze.',
+  },
   HEADER: {
     TITLE: 'Ready to ride an Open Spot?',
-    FILTER_PLACEHOLDER: 'Lorem ipsum',
+    FILTER_PLACEHOLDER:
+      'Here, we can save our favorite places to work out, chill, or engage in any relaxing activity. When saved, we will display the weather and temperature for you. Additionally, we provide shortcuts to navigate using Google Maps and Waze.',
   },
   SPOT_DETAIL: {
     WEATHER_NOW: 'Now',
@@ -17,6 +22,10 @@ export const UI_TEXT_EN = {
 }
 
 export const UI_TEXT_ES = {
+  WELLCOME: {
+    DESCRIPTION:
+      'Aquí, podemos guardar nuestros lugares favoritos para hacer ejercicio, relajarnos o realizar cualquier actividad de relax. Al ser guardados, mostraremos el clima y la temperatura para ti. Además, proporcionamos atajos para navegar utilizando Google Maps y Waze.',
+  },
   HEADER: {
     TITLE: 'Vamos a entrenar con Open Spot',
     FILTER_PLACEHOLDER: 'A donde?',

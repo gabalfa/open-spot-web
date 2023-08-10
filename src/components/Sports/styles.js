@@ -56,7 +56,7 @@ export const Card = styled.div`
 export const SpotContainer = styled.div`
   margin-bottom: 10px;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 95% 5%;
 `
 
 export const SpotContainerColumns = styled.div`
@@ -128,6 +128,6 @@ export const ArrowImages = styled.img`
 `
 
 export const OpenWithImages = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 `

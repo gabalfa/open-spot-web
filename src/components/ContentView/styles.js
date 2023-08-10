@@ -10,7 +10,7 @@ export const ContentViewContainer = styled.div`
 
   max-height: 105%;
 
-  margin: -90px 10px;
+  margin: -70px 10px;
 
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.19);
 
