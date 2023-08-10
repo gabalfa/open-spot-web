@@ -1,7 +1,13 @@
 import { useSpots } from '../../hooks/useSpots'
 import { useConstants } from '../../hooks/useConstants'
 
-import { BottomBarContainer, NextStepButton, SwitchImage } from './styles'
+import {
+  BottomBarContainer,
+  NextStepButton,
+  SwitchImage,
+  LanguageContainer,
+  LanguageTitle,
+} from './styles'
 
 import english from '../../assets/openspot-images/icons8-switch-en-96.png'
 import spanish from '../../assets/openspot-images/icons8-switch-es-96.png'
@@ -17,9 +23,15 @@ export const BottomBar = () => {
   return (
     <BottomBarContainer>
       {language ? (
-        <SwitchImage src={english} alt="lan" onClick={toggleSwitch} />
+        <LanguageContainer>
+          <SwitchImage src={english} alt="lan" onClick={toggleSwitch} />
+          <LanguageTitle>English</LanguageTitle>
+        </LanguageContainer>
       ) : (
-        <SwitchImage src={spanish} alt="lan" onClick={toggleSwitch} />
+        <LanguageContainer>
+          <SwitchImage src={spanish} alt="lan" onClick={toggleSwitch} />
+          <LanguageTitle>Español</LanguageTitle>
+        </LanguageContainer>
       )}
       <NextStepButton to="/open-spot-web/new-spot">
         {BOTTOM_BAR.ADD_BUTTON}

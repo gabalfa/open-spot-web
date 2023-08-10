@@ -55,6 +55,22 @@ export const NextStepButton = styled(Link)`
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.19);
 `
 
+export const LanguageContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
 export const SwitchImage = styled.img`
-  height: 80px;
+  height: 75px;
+  padding-right: 15px;
+`
+
+export const LanguageTitle = styled.label`
+  color: var(--grey, #9699aa);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
 `

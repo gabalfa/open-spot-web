@@ -2,7 +2,6 @@ import { useConstants } from '../../hooks/useConstants'
 import {
   StepBarContainer,
   StepBarCard,
-  // LabelStep,
   DescriptionCard,
   LabelDescription,
   LabelDescriptionStep,
@@ -10,9 +9,9 @@ import {
 } from './styles'
 
 import frequent from '../../assets/openspot-images/icons8-location-64-blue.png'
-import sports from '../../assets/openspot-images/icons8-trophy-50.png'
-import chill from '../../assets/openspot-images/icons8-holiday-48.png'
-import news from '../../assets/openspot-images/icons8-megaphone-48.png'
+// import sports from '../../assets/openspot-images/icons8-trophy-50.png'
+// import chill from '../../assets/openspot-images/icons8-holiday-48.png'
+// import news from '../../assets/openspot-images/icons8-megaphone-48.png'
 
 export const OpenSpotBar = () => {
   const { OPEN_SPOT_BAR } = useConstants()
