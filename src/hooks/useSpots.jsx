@@ -84,7 +84,20 @@ export function useSpots() {
         }&lang=${language ? 'en' : 'es'}`
       )
         .then((response) => response.json())
-        .then((json) => setCurrentForecast(json))
+        .then((json) => {
+          const { list } = json
+          const newList = list.map((forecast) => {
+            return {
+              ...forecast,
+              celsiusTemperature: `${Math.round(
+                parseFloat(forecast.main.temp) - 273.15
+              )}°`,
+              image: `${URL_WEATHER_IMG}/img/wn/${forecast.weather[0].icon}@4x.png`,
+            }
+          })
+
+          setCurrentForecast(newList)
+        })
     }
   }, [currentSpot, language])
 

@@ -2,25 +2,6 @@ import styled from 'styled-components'
 
 import { TEXT_COLORS } from '../../constants/colors'
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-rows: 10% 90%;
-  height: 65vh;
-  width: 100%;
-  @media screen and (min-width: 768px) {
-    height: 50vh;
-  }
-`
-
-export const Title = styled.label`
-  color: ${TEXT_COLORS.BLACK};
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  line-height: normal;
-`
-
 export const Description = styled.label`
   color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
@@ -29,13 +10,6 @@ export const Description = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-`
-
-export const CardsContainer = styled.div`
-  height: auto;
-  width: 100%;
-  margin-top: 40px;
-  overflow: scroll;
 `
 
 export const Card = styled.div`
@@ -49,10 +23,11 @@ export const Card = styled.div`
     props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
 
   padding: 10px 0;
-  height: ${(props) => (props.selected ? '150px' : '30px')};
+  height: ${(props) => (props.selected ? '130px' : '30px')};
 `
 
 export const SpotContainer = styled.div`
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 95% 5%;
 `
@@ -87,13 +62,11 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 30% 55% 15%;
+  grid-template-columns: 30% 35% 35%;
 `
 
 export const TemperatureContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding: 5px;
 `
 
 export const WeatherContainer = styled.div`
@@ -104,29 +77,30 @@ export const WeatherContainer = styled.div`
 
 export const MapsContainer = styled.div`
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-end;
+  padding: 15px;
+  align-items: center;
 `
 
 export const Temperature = styled.label`
+  font-family: Roboto;
   color: var(--grey, #9699aa);
-  font-size: 48px;
+  font-size: 64px;
   font-weight: '600';
 `
 
 export const WeatherTitle = styled.label`
+  font-family: Roboto;
   align-self: 'center';
-  color: ${TEXT_COLORS.BLACK};
+  color: var(--grey, #9699aa);
   font-size: 12px;
   font-weight: '600';
   text-transform: capitalize;
-  margin-top: -5%;
 `
 
 export const WeatherImages = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-top: -10%;
+  width: 60px;
+  height: 60px;
 `
 
 export const ArrowImages = styled.img`

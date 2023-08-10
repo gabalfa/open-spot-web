@@ -1,5 +1,6 @@
 import { useSpots } from '../../hooks/useSpots'
 import { useConstants } from '../../hooks/useConstants'
+import { CardSpots } from '../CardSpots'
 import {
   Container,
   Title,
@@ -28,8 +29,13 @@ import waze from '../../assets/openspot-images/icons8-waze-48.png'
 import maps from '../../assets/openspot-images/icons8-map-marker-48.png'
 
 export const Sports = () => {
-  const { spots, setCurrentSpot, currentWeather, resetSelectedSpots } =
-    useSpots()
+  const {
+    spots,
+    setCurrentSpot,
+    currentWeather,
+    currentForecast,
+    resetSelectedSpots,
+  } = useSpots()
 
   const { SPOTS } = useConstants()
 
@@ -39,6 +45,7 @@ export const Sports = () => {
     }
   }
 
+  // console.log(currentForecast)
   return (
     <Container>
       <Title>{SPOTS.TITLE}</Title>
@@ -49,6 +56,7 @@ export const Sports = () => {
           <TitleSpot>{SPOTS.NO_SPOTS_MESSAGE}</TitleSpot>
         )}
         {spots.map((item) => (
+          // <CardSpots key={item.guid} item={item} />
           <Card
             key={item.guid}
             onClick={() => setCurrentSpot(item)}
@@ -73,12 +81,16 @@ export const Sports = () => {
                   <Temperature>
                     {currentWeather?.celsiusTemperature}
                   </Temperature>
-                </TemperatureContainer>
-                <WeatherContainer>
                   <WeatherImages src={currentWeather?.image} alt="weather" />
                   <WeatherTitle>
                     {currentWeather?.weather[0].description}
                   </WeatherTitle>
+                </TemperatureContainer>
+                <WeatherContainer>
+                  {/* <WeatherImages src={currentWeather?.image} alt="weather" />
+                  <WeatherTitle>
+                    {currentWeather?.weather[0].description}
+                  </WeatherTitle> */}
                 </WeatherContainer>
                 <MapsContainer>
                   {/* <Anchor
