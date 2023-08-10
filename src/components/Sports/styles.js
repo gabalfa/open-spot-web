@@ -105,7 +105,7 @@ export const MapsContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 15px;
-  text-align: center;
+  align-items: center;
 `
 
 export const Temperature = styled.label`

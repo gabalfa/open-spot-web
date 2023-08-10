@@ -16,9 +16,7 @@ export const BottomBar = () => {
   const { language, setLanguage } = useSpots()
   const { BOTTOM_BAR } = useConstants()
 
-  const toggleSwitch = () => {
-    setLanguage((prevState) => !prevState)
-  }
+  const toggleSwitch = () => setLanguage((prevState) => !prevState)
 
   return (
     <BottomBarContainer>

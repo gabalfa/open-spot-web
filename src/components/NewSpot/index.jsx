@@ -11,12 +11,11 @@ import {
 } from './styles'
 
 import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
-// import { UI_TEXT_EN } from '../../constants/uiTexts'
 
 import addButton from '../../assets/openspot-images/icons8-add-48.png'
 
 export const NewSpot = () => {
-  const { newSpot, setNewSpot, handleAddSpot } = useSpots()
+  const { language, newSpot, setNewSpot, handleAddSpot } = useSpots()
   const { NEW_SPOT } = useConstants()
 
   return (
@@ -25,9 +24,9 @@ export const NewSpot = () => {
 
       <AutocompleteContainer>
         <GooglePlacesAutocomplete
-          placeholder={'Yeah..'}
+          minLengthAutocomplete={3}
+          placeholder={language ? 'es' : 'en'}
           apiKey={import.meta.env.VITE_MAPS_API_KEY}
-          debounce={300}
           selectProps={{
             value: newSpot,
             onChange: setNewSpot,
@@ -51,6 +50,10 @@ export const NewSpot = () => {
                 color: TEXT_COLORS.HEADER,
               }),
             },
+          }}
+          apiOptions={{
+            language: language ? 'es' : 'en',
+            region: language ? 'us' : 'en',
           }}
         />
       </AutocompleteContainer>

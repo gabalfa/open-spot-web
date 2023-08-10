@@ -81,21 +81,20 @@ export const Sports = () => {
                   </WeatherTitle>
                 </WeatherContainer>
                 <MapsContainer>
-                  <Anchor
+                  {/* <Anchor
                     target="_blank"
                     rel="noopener"
                     href={`https://www.google.com/maps?q=${item?.location.latitude},${item?.location.longitude}`}
                   >
                     <OpenWithImages src={maps} alt="maps" />
                     Maps
-                  </Anchor>
+                  </Anchor> */}
                   <Anchor
                     target="_blank"
                     rel="noopener"
                     href={`https://www.waze.com/ul?ll=${item?.location.latitude},${item?.location.longitude}&navigate=yes`}
                   >
                     <OpenWithImages src={waze} alt="waze"></OpenWithImages>
-                    Waze
                   </Anchor>
                 </MapsContainer>
               </DetailContainer>
