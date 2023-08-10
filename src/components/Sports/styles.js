@@ -13,14 +13,12 @@ export const Container = styled.div`
 `
 
 export const Title = styled.label`
-  color: ${TEXT_COLORS.BLACK};
+  color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  transition: color 1s ease;
 `
 
 export const Description = styled.label`
@@ -36,6 +34,7 @@ export const Description = styled.label`
 export const CardsContainer = styled.div`
   height: auto;
   width: 100%;
+  margin-top: 40px;
   overflow: scroll;
 `
 

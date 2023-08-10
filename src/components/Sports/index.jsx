@@ -1,4 +1,5 @@
 import { useSpots } from '../../hooks/useSpots'
+import { useConstants } from '../../hooks/useConstants'
 import {
   Container,
   Title,
@@ -30,6 +31,8 @@ export const Sports = () => {
   const { spots, setCurrentSpot, currentWeather, resetSelectedSpots } =
     useSpots()
 
+  const { SPOTS } = useConstants()
+
   const resetSelected = () => {
     if (currentWeather === undefined) {
       resetSelectedSpots()
@@ -38,8 +41,13 @@ export const Sports = () => {
 
   return (
     <Container>
-      <Title>{'Spots'}</Title>
+      <Title>{SPOTS.TITLE}</Title>
       <CardsContainer>
+        {spots.length > 0 ? (
+          <></>
+        ) : (
+          <TitleSpot>{SPOTS.NO_SPOTS_MESSAGE}</TitleSpot>
+        )}
         {spots.map((item) => (
           <Card
             key={item.guid}
