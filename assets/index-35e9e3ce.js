@@ -437,7 +437,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   align-items: flex-start;
 `,Nx=_.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
 `,Dx=_.label`
   color: var(--grey, #9699aa);
