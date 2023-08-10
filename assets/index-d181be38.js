@@ -204,7 +204,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   background: ${Vl.BLACK};
   color: #fff;
   text-decoration: none;
-  width: 123px;
+  width: 150px;
   height: 48px;
 
   float: right;
