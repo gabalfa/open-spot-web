@@ -104,7 +104,7 @@ export const WeatherContainer = styled.div`
 
 export const MapsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
 `
 
