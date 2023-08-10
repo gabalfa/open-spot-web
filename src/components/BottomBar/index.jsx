@@ -1,8 +1,8 @@
 import { useSpots } from '../../hooks/useSpots'
 import { BottomBarContainer, NextStepButton, SwitchImage } from './styles'
 
-import english from '../../assets/openspot-images/icons8-switch-en-48.png'
-import spanish from '../../assets/openspot-images/icons8-switch-es-48.png'
+import english from '../../assets/openspot-images/icons8-switch-en-96.png'
+import spanish from '../../assets/openspot-images/icons8-switch-es-96.png'
 
 export const BottomBar = () => {
   const { language, setLanguage } = useSpots()

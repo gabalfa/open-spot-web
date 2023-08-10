@@ -6,10 +6,11 @@ export const BottomBarContainer = styled.div`
   grid-area: bottomBarContainer;
   background-color: ${(props) => (props.stage === 5 ? 'none' : '#fff')};
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
 
-  text-align: justify;
-  align-items: center;
   @media screen and (min-width: 768px) {
     background: none;
     padding: 10px 45px;
@@ -55,6 +56,5 @@ export const NextStepButton = styled(Link)`
 `
 
 export const SwitchImage = styled.img`
-  width: 80px;
-  height: 60px;
+  height: 80px;
 `
