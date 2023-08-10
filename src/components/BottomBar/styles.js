@@ -36,7 +36,7 @@ export const GoBackButton = styled(Link)`
   }
 `
 
-export const NextStepButton = styled(Link)`
+export const NewButton = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ export const NextStepButton = styled(Link)`
   background: ${BACKGROUND_COLORS.BLACK};
   color: #fff;
   text-decoration: none;
-  width: 123px;
+  width: 150px;
   height: 48px;
 
   float: right;

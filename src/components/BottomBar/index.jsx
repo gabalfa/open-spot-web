@@ -3,7 +3,7 @@ import { useConstants } from '../../hooks/useConstants'
 
 import {
   BottomBarContainer,
-  NextStepButton,
+  NewButton,
   SwitchImage,
   LanguageContainer,
   LanguageTitle,
@@ -33,9 +33,9 @@ export const BottomBar = () => {
           <LanguageTitle>Español</LanguageTitle>
         </LanguageContainer>
       )}
-      <NextStepButton to="/open-spot-web/new-spot">
+      <NewButton to="/open-spot-web/new-spot">
         {BOTTOM_BAR.ADD_BUTTON}
-      </NextStepButton>
+      </NewButton>
     </BottomBarContainer>
   )
 }
