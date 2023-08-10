@@ -9,6 +9,7 @@ export const BottomBarContainer = styled.div`
   padding: 15px;
 
   text-align: justify;
+  align-items: center;
   @media screen and (min-width: 768px) {
     background: none;
     padding: 10px 45px;
@@ -51,4 +52,9 @@ export const NextStepButton = styled(Link)`
 
   float: right;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.19);
+`
+
+export const SwitchImage = styled.img`
+  width: 80px;
+  height: 60px;
 `

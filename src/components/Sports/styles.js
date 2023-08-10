@@ -89,7 +89,7 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 30% 35% 35%;
 `
 
 export const TemperatureContainer = styled.div`

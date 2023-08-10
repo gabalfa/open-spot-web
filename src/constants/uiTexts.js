@@ -1,5 +1,6 @@
 export const UI_TEXT_EN = {
   WELLCOME: {
+    TITLE: 'Wellcome to!',
     DESCRIPTION:
       'Here, we can save our favorite places to work out, chill, or engage in any relaxing activity. When saved, we will display the weather and temperature for you. Additionally, we provide shortcuts to navigate using Google Maps and Waze.',
   },
@@ -23,6 +24,7 @@ export const UI_TEXT_EN = {
 
 export const UI_TEXT_ES = {
   WELLCOME: {
+    TITLE: 'Bienvenido!',
     DESCRIPTION:
       'Aquí, podemos guardar nuestros lugares favoritos para hacer ejercicio, relajarnos o realizar cualquier actividad de relax. Al ser guardados, mostraremos el clima y la temperatura para ti. Además, proporcionamos atajos para navegar utilizando Google Maps y Waze.',
   },

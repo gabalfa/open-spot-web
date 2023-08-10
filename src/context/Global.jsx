@@ -1,4 +1,6 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, useState } from 'react'
+
+import { ConstantsProvider } from './Constants'
 import { spotsReducer, spotstInitialState } from '../reducers/spots.js'
 
 export const GlobalContext = createContext()
@@ -51,11 +53,26 @@ export function GlobalProvider({ children }) {
     resetSelectedSpots,
   } = useSpotsReducer()
 
+  const [language, setLanguage] = useState(true)
+  const [newSpot, setNewSpot] = useState(null)
+  const [currentSpot, setCurrentSpot] = useState(undefined)
+  const [currentWeather, setCurrentWeather] = useState(undefined)
+  const [currentForecast, setCurrentForecast] = useState(undefined)
+
   return (
     <GlobalContext.Provider
       value={{
         spots: state,
-
+        language,
+        setLanguage,
+        newSpot,
+        setNewSpot,
+        currentSpot,
+        setCurrentSpot,
+        currentWeather,
+        setCurrentWeather,
+        currentForecast,
+        setCurrentForecast,
         addToSpots,
         removeFromSpots,
         clearSpots,
@@ -63,7 +80,7 @@ export function GlobalProvider({ children }) {
         resetSelectedSpots,
       }}
     >
-      {children}
+      <ConstantsProvider>{children}</ConstantsProvider>
     </GlobalContext.Provider>
   )
 }

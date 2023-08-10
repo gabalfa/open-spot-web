@@ -1,4 +1,4 @@
-import { useContext, useEffect, useCallback, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
 import { GlobalContext } from '../context/Global'
@@ -9,15 +9,22 @@ export function useSpots() {
 
   const context = useContext(GlobalContext)
 
-  const { spots, addToSpots, setSelectedSpot, resetSelectedSpots } = context
-
-  const [newSpot, setNewSpot] = useState(null)
-
-  const [currentSpot, setCurrentSpot] = useState(undefined)
-
-  const [currentWeather, setCurrentWeather] = useState(undefined)
-
-  const [currentForecast, setCurrentForecacst] = useState(undefined)
+  const {
+    spots,
+    language,
+    setLanguage,
+    newSpot,
+    setNewSpot,
+    currentSpot,
+    setCurrentSpot,
+    currentWeather,
+    setCurrentWeather,
+    currentForecast,
+    setCurrentForecast,
+    addToSpots,
+    setSelectedSpot,
+    resetSelectedSpots,
+  } = context
 
   const handleAddSpot = () => {
     geocodeByAddress(newSpot?.label).then(async (results) => {
@@ -46,10 +53,7 @@ export function useSpots() {
     })
   }
 
-  useEffect(() => {
-    // if (spots.length < 1) window.location.href = '/open-spot-web/new-spot'
-    resetSelectedSpots()
-  }, [])
+  useEffect(() => resetSelectedSpots(), [])
 
   useEffect(() => {
     if (currentSpot !== undefined) {
@@ -59,7 +63,7 @@ export function useSpots() {
           currentSpot?.location.latitude
         }&lon=${currentSpot?.location.longitude}&appid=${
           import.meta.env.VITE_API_KEY_WEATHER
-        }&lang=${'en'}`
+        }&lang=${language ? 'en' : 'es'}`
       )
         .then((response) => response.json())
         .then((json) => {
@@ -77,16 +81,19 @@ export function useSpots() {
           currentSpot?.location.latitude
         }&lon=${currentSpot?.location.longitude}&appid=${
           import.meta.env.VITE_API_KEY_WEATHER
-        }&lang=${'en'}`
+        }&lang=${language ? 'en' : 'es'}`
       )
         .then((response) => response.json())
-        .then((json) => setCurrentForecacst(json))
+        .then((json) => setCurrentForecast(json))
     }
-  }, [currentSpot])
+  }, [currentSpot, language])
 
   return {
     ...context,
+    spots,
     newSpot,
+    language,
+    setLanguage,
     currentSpot,
     currentWeather,
     currentForecast,
