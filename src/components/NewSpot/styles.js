@@ -12,14 +12,12 @@ export const SelectPlanContainer = styled.div`
 `
 
 export const Title = styled.label`
-  color: ${TEXT_COLORS.BLACK};
+  color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  transition: color 1s ease;
 `
 
 export const AutocompleteContainer = styled.div`

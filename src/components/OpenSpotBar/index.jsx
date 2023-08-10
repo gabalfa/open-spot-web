@@ -1,3 +1,4 @@
+import { useConstants } from '../../hooks/useConstants'
 import {
   StepBarContainer,
   StepBarCard,
@@ -14,13 +15,16 @@ import chill from '../../assets/openspot-images/icons8-holiday-48.png'
 import news from '../../assets/openspot-images/icons8-megaphone-48.png'
 
 export const OpenSpotBar = () => {
+  const { OPEN_SPOT_BAR } = useConstants()
   return (
     <StepBarContainer>
       <StepBarCard to="/open-spot-web/sports">
         <MenuImages src={frequent} alt="location" />
         <DescriptionCard>
-          <LabelDescription>DAILY</LabelDescription>
-          <LabelDescriptionStep>PLACES</LabelDescriptionStep>
+          <LabelDescription>{OPEN_SPOT_BAR.TITLE}</LabelDescription>
+          <LabelDescriptionStep>
+            {OPEN_SPOT_BAR.DESCRIPTION}
+          </LabelDescriptionStep>
         </DescriptionCard>
       </StepBarCard>
       {/* <StepBarCard to="/open-spot-web/sports">

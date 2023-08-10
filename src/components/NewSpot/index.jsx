@@ -1,4 +1,6 @@
 import { useSpots } from '../../hooks/useSpots'
+import { useConstants } from '../../hooks/useConstants'
+
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import {
   SelectPlanContainer,
@@ -15,10 +17,11 @@ import addButton from '../../assets/openspot-images/icons8-add-48.png'
 
 export const NewSpot = () => {
   const { newSpot, setNewSpot, handleAddSpot } = useSpots()
+  const { NEW_SPOT } = useConstants()
 
   return (
     <SelectPlanContainer>
-      <Title>{'Add a new spot!'}</Title>
+      <Title>{NEW_SPOT.TITLE}</Title>
 
       <AutocompleteContainer>
         <GooglePlacesAutocomplete

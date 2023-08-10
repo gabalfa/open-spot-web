@@ -10,8 +10,16 @@ export const UI_TEXT_EN = {
       'Here, we can save our favorite places to work out, chill, or engage in any relaxing activity. When saved, we will display the weather and temperature for you. Additionally, we provide shortcuts to navigate using Google Maps and Waze.',
   },
   SPOTS: {
-    TITLE: 'Here you´ll find your selected spots!',
+    TITLE:
+      'We give you the weather forecast and routes to go to your favorite places!!',
     NO_SPOTS_MESSAGE: 'Let´s to add some spots',
+  },
+  OPEN_SPOT_BAR: {
+    TITLE: 'OPEN SPOT',
+    DESCRIPTION: 'SIMPLE TO USE',
+  },
+  NEW_SPOT: {
+    TITLE: 'Write the name of the place you are looking for',
   },
   BOTTOM_BAR: {
     ADD_BUTTON: 'Add a new Spot!',
@@ -40,12 +48,21 @@ export const UI_TEXT_ES = {
     FILTER_PLACEHOLDER: 'A donde?',
   },
   SPOTS: {
-    TITLE: 'Acá encontraras tus lugares seleccionados!',
+    TITLE:
+      'Te damos el pronostico del tiempo y rutas para ir a tus lugares favoritos!',
     NO_SPOTS_MESSAGE: 'Agregate unos spots',
+  },
+  OPEN_SPOT_BAR: {
+    TITLE: 'OPEN SPOT',
+    DESCRIPTION: 'FACIL DE USAR',
+  },
+  NEW_SPOT: {
+    TITLE: 'Escribe el nombre del lugar que buscas',
   },
   BOTTOM_BAR: {
     ADD_BUTTON: 'Agregate un Spot!',
   },
+
   SPOT_DETAIL: {
     WEATHER_NOW: 'Ahora',
     FORECAST: 'Pronostico',
