@@ -13,7 +13,7 @@ export const Container = styled.div`
 `
 
 export const Title = styled.label`
-  color: var(--grey, #9699aa);
+  color: ${TEXT_COLORS.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
   font-size: 20px;
@@ -48,7 +48,7 @@ export const Card = styled.div`
   border-bottom: ${(props) =>
     props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
 
-  padding: 10px;
+  padding: 10px 0;
   height: ${(props) => (props.selected ? '130px' : '30px')};
 `
 

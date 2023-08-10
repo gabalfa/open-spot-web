@@ -12,7 +12,7 @@ export const SelectPlanContainer = styled.div`
 `
 
 export const Title = styled.label`
-  color: var(--grey, #9699aa);
+  color: ${TEXT_COLORS.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
   font-size: 20px;
