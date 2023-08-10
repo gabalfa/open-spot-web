@@ -23,6 +23,7 @@ const App = () => {
             <Route path="/open-spot-web/new-spot" element={<NewSpot />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </GlobalProvider>

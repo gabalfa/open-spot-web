@@ -50,12 +50,21 @@ export const Card = styled.div`
     props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
 
   padding: 10px;
-  height: ${(props) => (props.selected ? '120px' : '30px')};
+  height: ${(props) => (props.selected ? '130px' : '30px')};
 `
 
 export const SpotContainer = styled.div`
   margin-bottom: 10px;
   display: grid;
+  grid-template-columns: 80% 20%;
+`
+
+export const SpotContainerColumns = styled.div`
+  display: grid;
+`
+export const SpotContainerColumnsB = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
 
 export const TitleSpot = styled.label`
@@ -80,11 +89,16 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr;
 `
 
 export const WeatherContainer = styled.div`
   display: grid;
+`
+
+export const MapsContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
 
 export const Temperature = styled.label`
@@ -106,4 +120,14 @@ export const WeatherTitle = styled.label`
 export const WeatherImages = styled.img`
   width: 60px;
   height: 60px;
+`
+
+export const ArrowImages = styled.img`
+  width: 15px;
+  height: 15px;
+`
+
+export const OpenWithImages = styled.img`
+  width: 50px;
+  height: 50px;
 `
