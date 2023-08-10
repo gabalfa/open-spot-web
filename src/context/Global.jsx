@@ -53,7 +53,7 @@ export function GlobalProvider({ children }) {
     resetSelectedSpots,
   } = useSpotsReducer()
 
-  const [language, setLanguage] = useState(true)
+  const [language, setLanguage] = useState(false)
   const [newSpot, setNewSpot] = useState(null)
   const [currentSpot, setCurrentSpot] = useState(undefined)
   const [currentWeather, setCurrentWeather] = useState(undefined)
