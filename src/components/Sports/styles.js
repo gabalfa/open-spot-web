@@ -46,10 +46,12 @@ export const Card = styled.div`
     border-bottom: 1px solid ${TEXT_COLORS.HEADER};
   }
   border-bottom: ${(props) =>
-    props.selected ? `1px solid ${TEXT_COLORS.HEADER}` : '1px solid #d6d9e6'};
+    props.selected
+      ? `1px solid ${TEXT_COLORS.HEADER}`
+      : `1px solid ${TEXT_COLORS.BLUE_OWN}`};
 
   padding: 10px 0;
-  height: ${(props) => (props.selected ? '150px' : '30px')};
+  height: ${(props) => (props.selected ? '150px' : '40px')};
 `
 
 export const SpotContainer = styled.div`
@@ -68,9 +70,9 @@ export const SpotContainerColumnsB = styled.div`
 export const TitleSpot = styled.label`
   color: ${TEXT_COLORS.HEADER};
 
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
   text-transform: capitalize;
