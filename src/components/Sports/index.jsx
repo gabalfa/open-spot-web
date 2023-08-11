@@ -20,13 +20,14 @@ import {
   WeatherImages,
   ArrowImages,
   OpenWithImages,
+  RemoveImages,
   Anchor,
 } from './styles'
 
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
 import leftArrow from '../../assets/openspot-images/icons8-double-up-48.png'
 import waze from '../../assets/openspot-images/icons8-waze-48.png'
-import maps from '../../assets/openspot-images/icons8-map-marker-48.png'
+import remove from '../../assets/openspot-images/icons8-remove-48.png'
 
 export const Sports = () => {
   const {
@@ -34,6 +35,7 @@ export const Sports = () => {
     setCurrentSpot,
     currentWeather,
     currentForecast,
+    removeFromSpots,
     resetSelectedSpots,
   } = useSpots()
 
@@ -108,6 +110,13 @@ export const Sports = () => {
                   >
                     <OpenWithImages src={waze} alt="waze"></OpenWithImages>
                   </Anchor>
+                  <RemoveImages
+                    onClick={() => {
+                      removeFromSpots(item.guid)
+                    }}
+                    src={remove}
+                    alt="remove"
+                  ></RemoveImages>
                 </MapsContainer>
               </DetailContainer>
             ) : (

@@ -25,8 +25,8 @@ const UPDATE_STATE_BY_ACTION = {
     return state
   },
   [SPOTS_ACTION_TYPES.REMOVE_FROM_SPOTS]: (state, action) => {
-    const { id } = action.payload
-    const newState = state.filter((item) => item.id !== id)
+    const guid = action.payload
+    const newState = state.filter((item) => item.guid !== guid)
     updateLocalStorage(newState)
     return newState
   },

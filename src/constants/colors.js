@@ -6,6 +6,7 @@ export const BACKGROUND_COLORS = {
   DIVIDER: '#E9E9EB',
   BRAND: '#1C1B1B',
   ACTIVE: '#EEFEF1',
+  BLUE_OWN: '1EA2E4',
 }
 
 export const TEXT_COLORS = {
@@ -19,4 +20,5 @@ export const TEXT_COLORS = {
   INTERACTIVE: '#1370BC',
   BLUE_SWITCH: '#81b0ff',
   YELLOW_SWITCH: '#F3E462',
+  BLUE_OWN: '#1EA2E4',
 }

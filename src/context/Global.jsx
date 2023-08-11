@@ -19,10 +19,10 @@ function useSpotsReducer() {
       payload: spot,
     })
 
-  const removeFromSpots = (spot) =>
+  const removeFromSpots = (guid) =>
     dispatch({
       type: 'REMOVE_FROM_SPOTS',
-      payload: spot,
+      payload: guid,
     })
 
   const clearSpots = () => dispatch({ type: 'CLEAR_SPOTS' })

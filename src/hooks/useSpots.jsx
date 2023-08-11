@@ -22,6 +22,7 @@ export function useSpots() {
     currentForecast,
     setCurrentForecast,
     addToSpots,
+    removeFromSpots,
     setSelectedSpot,
     resetSelectedSpots,
   } = context
@@ -111,6 +112,7 @@ export function useSpots() {
     currentWeather,
     currentForecast,
     setNewSpot,
+    removeFromSpots,
     handleAddSpot,
     setCurrentSpot,
     resetSelectedSpots,

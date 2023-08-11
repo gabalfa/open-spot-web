@@ -35,7 +35,7 @@ export const CardsContainer = styled.div`
   height: auto;
   width: 100%;
   margin-top: 40px;
-  overflow: scroll;
+  overflow: auto;
 `
 
 export const Card = styled.div`
@@ -104,8 +104,9 @@ export const WeatherContainer = styled.div`
 
 export const MapsContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
-  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
 `
 
 export const Temperature = styled.label`
@@ -135,9 +136,15 @@ export const ArrowImages = styled.img`
 `
 
 export const OpenWithImages = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 `
+
+export const RemoveImages = styled.img`
+  width: 25px;
+  height: 25px;
+`
+
 export const Anchor = styled.a`
   color: var(--grey, #9699aa);
   font-size: 12px;
