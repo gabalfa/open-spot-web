@@ -415,7 +415,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   text-align: left;
   text-wrap: nowrap;
 `,bx=L.label`
