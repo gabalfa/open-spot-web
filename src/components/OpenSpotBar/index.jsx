@@ -17,7 +17,7 @@ export const OpenSpotBar = () => {
   const { OPEN_SPOT_BAR } = useConstants()
   return (
     <StepBarContainer>
-      <StepBarCard to="/open-spot-web/sports">
+      <StepBarCard id="goToSpots" to="/open-spot-web/sports">
         <MenuImages src={frequent} alt="location" />
         <DescriptionCard>
           <LabelDescription>{OPEN_SPOT_BAR.TITLE}</LabelDescription>

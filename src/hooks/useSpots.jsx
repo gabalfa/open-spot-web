@@ -51,6 +51,7 @@ export function useSpots() {
         selected: false,
         type: 'sport',
       })
+      document.getElementById('goToSpots').click()
     })
   }
 

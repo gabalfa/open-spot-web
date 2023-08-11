@@ -15,7 +15,7 @@ export const updateLocalStorage = (state) => {
 
 const UPDATE_STATE_BY_ACTION = {
   [SPOTS_ACTION_TYPES.ADD_TO_SPOTS]: (state, action) => {
-    window.location.href = '/open-spot-web/sports'
+    // window.location.href = '/open-spot-web/sports'
     const newSpot = action.payload
     const spotIndex = state.findIndex((spot) => spot.guid === newSpot.guid)
     if (spotIndex < 0) {

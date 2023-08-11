@@ -84,6 +84,11 @@ export const DescriptionSpot = styled.label`
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
+  &:hover {
+    color: ${TEXT_COLORS.HEADER};
+    /* transition: color 0.9ms ease; */
+  }
+  /* transition: color 0.9ms ease; */
 `
 export const DetailContainer = styled.div`
   display: grid;
