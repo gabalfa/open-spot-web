@@ -22,6 +22,7 @@ import {
   OpenWithImages,
   RemoveImages,
   Anchor,
+  NewButton,
 } from './styles'
 
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
@@ -55,7 +56,9 @@ export const Sports = () => {
         {spots.length > 0 ? (
           <></>
         ) : (
-          <TitleSpot>{SPOTS.NO_SPOTS_MESSAGE}</TitleSpot>
+          <NewButton to="/open-spot-web/new-spot">
+            {SPOTS.NO_SPOTS_MESSAGE}
+          </NewButton>
         )}
         {spots.map((item) => (
           // <CardSpots key={item.guid} item={item} />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { TEXT_COLORS } from '../../constants/colors'
@@ -15,8 +16,7 @@ export const Container = styled.div`
 export const Title = styled.label`
   color: ${TEXT_COLORS.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Roboto;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   line-height: normal;
 `
@@ -24,7 +24,6 @@ export const Title = styled.label`
 export const Description = styled.label`
   color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -36,6 +35,7 @@ export const CardsContainer = styled.div`
   width: 100%;
   margin-top: 40px;
   overflow: auto;
+  text-align: center;
 `
 
 export const Card = styled.div`
@@ -73,10 +73,8 @@ export const TitleSpot = styled.label`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: left;
-  text-wrap: nowrap;
 `
 
 export const DescriptionSpot = styled.label`
@@ -152,4 +150,23 @@ export const Anchor = styled.a`
   color: var(--grey, #9699aa);
   font-size: 12px;
   text-decoration: none;
+`
+
+export const NewButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1px solid ${TEXT_COLORS.BLUE_OWN};
+  background: ${TEXT_COLORS.BLANK};
+  color: ${TEXT_COLORS.BLACK};
+  text-decoration: none;
+
+  padding: 20px;
+
+  margin: 0px auto;
 `

@@ -15,7 +15,7 @@ export const Title = styled.label`
   color: ${TEXT_COLORS.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   line-height: normal;
 `
