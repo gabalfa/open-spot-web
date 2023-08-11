@@ -425,7 +425,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   line-height: 30px;
 `,Lx=I.div`
   display: grid;
-  grid-template-columns: 30% 55% 15%;
+  grid-template-columns: 15% 70% 15%;
 `,Ix=I.div`
   display: flex;
   flex-direction: column;
@@ -450,6 +450,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-weight: '600';
   text-transform: capitalize;
   margin-top: -5%;
+  text-wrap: nowrap;
 `,Fx=I.img`
   width: 50px;
   height: 50px;
