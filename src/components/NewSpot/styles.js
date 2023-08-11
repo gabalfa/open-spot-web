@@ -4,7 +4,7 @@ import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
 
 export const SelectPlanContainer = styled.div`
   display: grid;
-  grid-template-rows: 20% 20% 10% 40% 10%;
+  grid-template-rows: 20% 20% 60%;
   height: 70%;
   width: 100%;
   @media screen and (min-width: 768px) {
@@ -30,7 +30,7 @@ export const AutocompleteContainer = styled.div`
 `
 
 export const Description = styled.label`
-  color: var(--grey, #9699aa);
+  color: ${TEXT_COLORS.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
   font-size: 16px;
@@ -40,6 +40,12 @@ export const Description = styled.label`
 `
 
 export const AddImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+`
+
+export const ConfirmContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
 `

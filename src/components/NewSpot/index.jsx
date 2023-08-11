@@ -8,11 +8,12 @@ import {
   Description,
   AddImage,
   AutocompleteContainer,
+  ConfirmContainer,
 } from './styles'
 
 import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
 
-import addButton from '../../assets/openspot-images/icons8-add-48.png'
+import addButton from '../../assets/openspot-images/icons8-add-64.png'
 
 export const NewSpot = () => {
   const { language, newSpot, setNewSpot, handleAddSpot } = useSpots()
@@ -33,20 +34,20 @@ export const NewSpot = () => {
             styles: {
               input: (provided) => ({
                 ...provided,
-                fontSize: '14px',
+                fontSize: '20px',
                 color: TEXT_COLORS.BLACK,
                 height: '50px',
               }),
               option: (provided) => ({
                 ...provided,
-                fontSize: '14px',
+                fontSize: '16px',
                 color: TEXT_COLORS.HEADER,
                 height: '60px',
                 borderBottom: `1px solid #9699aa`,
               }),
               singleValue: (provided) => ({
                 ...provided,
-                fontSize: '14px',
+                fontSize: '20px',
                 color: TEXT_COLORS.HEADER,
               }),
             },
@@ -61,15 +62,12 @@ export const NewSpot = () => {
       {newSpot == undefined ? (
         <></>
       ) : (
-        <>
-          <Description>
-            {newSpot == undefined ? '' : 'Selecccionaste'}
-          </Description>
-          {/* <Description>
-            {newSpot == undefined ? '' : newSpot?.label}
-          </Description> */}
+        <ConfirmContainer>
           <AddImage src={addButton} alt="add" onClick={handleAddSpot} />
-        </>
+          <Description>
+            {newSpot == undefined ? '' : 'Presiona para confirmar'}
+          </Description>
+        </ConfirmContainer>
       )}
     </SelectPlanContainer>
   )
