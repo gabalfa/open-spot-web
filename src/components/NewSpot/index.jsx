@@ -62,8 +62,8 @@ export const NewSpot = () => {
       {newSpot == undefined ? (
         <></>
       ) : (
-        <ConfirmContainer>
-          <AddImage src={addButton} alt="add" onClick={handleAddSpot} />
+        <ConfirmContainer onClick={handleAddSpot}>
+          <AddImage src={addButton} alt="add" />
           <Description>
             {newSpot == undefined ? '' : 'Presiona para confirmar'}
           </Description>
