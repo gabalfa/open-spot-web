@@ -75,7 +75,7 @@ export const TitleSpot = styled.label`
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   text-align: left;
   text-wrap: nowrap;
 `
