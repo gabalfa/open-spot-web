@@ -65,7 +65,7 @@ export const LabelDescriptionStep = styled.label`
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 1px;
   text-transform: uppercase;

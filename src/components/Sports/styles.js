@@ -67,23 +67,23 @@ export const SpotContainerColumnsB = styled.div`
 
 export const TitleSpot = styled.label`
   color: ${TEXT_COLORS.HEADER};
-  font-family: Roboto;
+
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: left;
+  text-wrap: nowrap;
 `
 
 export const DescriptionSpot = styled.label`
-  color: var(--grey, #9699aa);
-  font-family: Roboto;
+  color: ${TEXT_COLORS.BLACK};
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+  font-weight: 500;
+  line-height: 30px;
 `
 export const DetailContainer = styled.div`
   display: grid;
@@ -109,7 +109,7 @@ export const MapsContainer = styled.div`
 `
 
 export const Temperature = styled.label`
-  color: var(--grey, #9699aa);
+  color: var(--grey, #48484a);
   font-size: 48px;
   font-weight: '600';
 `

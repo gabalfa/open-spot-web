@@ -9,7 +9,7 @@ export const BACKGROUND_COLORS = {
 }
 
 export const TEXT_COLORS = {
-  BLACK: '#29272C',
+  BLACK: '#48484a',
   BLANK: '#FFF',
   HEADER: '#F88178',
   BODY: '#29272C',
