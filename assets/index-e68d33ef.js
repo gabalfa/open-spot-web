@@ -388,6 +388,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   overflow: auto;
   text-align: center;
 `,Ax=L.div`
+  text-align: left;
   background-color: #fff;
 
   /* transition: height 500ms ease-in-out; */
