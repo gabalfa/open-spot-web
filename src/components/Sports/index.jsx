@@ -24,7 +24,7 @@ import {
 } from './styles'
 
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
-import leftArrow from '../../assets/openspot-images/icons8-double-left-48.png'
+import leftArrow from '../../assets/openspot-images/icons8-double-up-48.png'
 import waze from '../../assets/openspot-images/icons8-waze-48.png'
 import maps from '../../assets/openspot-images/icons8-map-marker-48.png'
 

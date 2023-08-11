@@ -31,7 +31,7 @@ export function useSpots() {
       const { lat, lng } = await getLatLng(results[0])
       addToSpots({
         guid: newSpot.value.place_id,
-        name: newSpot.value.structured_formatting.main_text.toUpperCase(),
+        name: newSpot.value.structured_formatting.main_text,
         location: {
           latitude: lat,
           longitude: lng,
