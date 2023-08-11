@@ -69,7 +69,6 @@ export const SpotContainerColumnsB = styled.div`
 
 export const TitleSpot = styled.label`
   color: ${TEXT_COLORS.HEADER};
-
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
