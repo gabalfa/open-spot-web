@@ -39,6 +39,7 @@ export const CardsContainer = styled.div`
 `
 
 export const Card = styled.div`
+  text-align: left;
   background-color: #fff;
 
   /* transition: height 500ms ease-in-out; */
