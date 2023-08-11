@@ -51,7 +51,7 @@ export const Card = styled.div`
       : `1px solid ${TEXT_COLORS.BLUE_OWN}`};
 
   padding: 10px 0;
-  height: ${(props) => (props.selected ? '150px' : '40px')};
+  height: ${(props) => (props.selected ? '140px' : '40px')};
 `
 
 export const SpotContainer = styled.div`
@@ -112,7 +112,7 @@ export const MapsContainer = styled.div`
 
 export const Temperature = styled.label`
   color: var(--grey, #48484a);
-  font-size: 48px;
+  font-size: 30px;
   font-weight: '600';
 `
 
@@ -129,6 +129,7 @@ export const WeatherImages = styled.img`
   width: 50px;
   height: 50px;
   margin-top: -10%;
+  margin-left: -5%;
 `
 
 export const ArrowImages = styled.img`
