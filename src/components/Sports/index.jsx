@@ -48,7 +48,7 @@ export const Sports = () => {
     }
   }
 
-  // console.log(currentForecast)
+  console.log(currentForecast)
   return (
     <Container>
       <Title>{SPOTS.TITLE}</Title>

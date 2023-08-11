@@ -34,20 +34,20 @@ export const NewSpot = () => {
             styles: {
               input: (provided) => ({
                 ...provided,
-                fontSize: '20px',
+                fontSize: '14px',
                 color: TEXT_COLORS.BLACK,
-                height: '50px',
+                height: '30px',
               }),
               option: (provided) => ({
                 ...provided,
-                fontSize: '16px',
+                fontSize: '12px',
                 color: TEXT_COLORS.HEADER,
-                height: '60px',
+                height: '50px',
                 borderBottom: `1px solid #9699aa`,
               }),
               singleValue: (provided) => ({
                 ...provided,
-                fontSize: '20px',
+                fontSize: '16px',
                 color: TEXT_COLORS.HEADER,
               }),
             },

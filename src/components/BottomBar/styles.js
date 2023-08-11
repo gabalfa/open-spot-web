@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { BACKGROUND_COLORS } from '../../constants/colors'
+import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
 
 export const BottomBarContainer = styled.div`
   grid-area: bottomBarContainer;
@@ -8,8 +8,8 @@ export const BottomBarContainer = styled.div`
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+  align-items: flex-start;
+  padding: 0px 15px;
 
   @media screen and (min-width: 768px) {
     background: none;
@@ -50,7 +50,8 @@ export const NewButton = styled(Link)`
   text-decoration: none;
   width: 150px;
   height: 48px;
-
+  margin-top: 11px;
+  margin-bottom: 25px;
   float: right;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.19);
 `
@@ -64,13 +65,15 @@ export const LanguageContainer = styled.div`
 export const SwitchImage = styled.img`
   height: 75px;
   padding-right: 15px;
+  padding-bottom: 25px;
 `
 
 export const LanguageTitle = styled.label`
-  color: var(--grey, #9699aa);
+  color: ${(props) =>
+    props.language === 'en' ? TEXT_COLORS.BLUE_OWN : TEXT_COLORS.HEADER};
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   line-height: normal;
+  padding-bottom: 25px;
 `

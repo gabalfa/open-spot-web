@@ -23,12 +23,12 @@ export const BottomBar = () => {
       {language ? (
         <LanguageContainer>
           <SwitchImage src={english} alt="lan" onClick={toggleSwitch} />
-          <LanguageTitle>English</LanguageTitle>
+          <LanguageTitle language={'en'}>English</LanguageTitle>
         </LanguageContainer>
       ) : (
         <LanguageContainer>
           <SwitchImage src={spanish} alt="lan" onClick={toggleSwitch} />
-          <LanguageTitle>Español</LanguageTitle>
+          <LanguageTitle language={'es'}>Español</LanguageTitle>
         </LanguageContainer>
       )}
       <NewButton to="/open-spot-web/new-spot">

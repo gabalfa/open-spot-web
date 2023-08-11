@@ -21,10 +21,7 @@ export const Title = styled.label`
 `
 
 export const AutocompleteContainer = styled.div`
-  /* display: grid;
-  grid-template-rows: 20% 80%; */
   height: 50px;
-  /* width: 100%; */
   @media screen and (min-width: 768px) {
   }
 `
