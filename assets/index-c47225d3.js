@@ -398,7 +398,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   border-bottom: ${e=>e.selected?`1px solid ${he.HEADER}`:`1px solid ${he.BLUE_OWN}`};
 
   padding: 10px 0;
-  height: ${e=>e.selected?"150px":"40px"};
+  height: ${e=>e.selected?"140px":"40px"};
 `,Px=I.div`
   display: grid;
   grid-template-columns: 95% 5%;
@@ -441,7 +441,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   align-items: flex-end;
 `,_x=I.label`
   color: var(--grey, #48484a);
-  font-size: 48px;
+  font-size: 30px;
   font-weight: '600';
 `,Dx=I.label`
   align-self: 'center';
@@ -454,6 +454,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   width: 50px;
   height: 50px;
   margin-top: -10%;
+  margin-left: -5%;
 `,Hd=I.img`
   width: 15px;
   height: 15px;
