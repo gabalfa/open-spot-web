@@ -11,7 +11,7 @@ import {
   ConfirmContainer,
 } from './styles'
 
-import { BACKGROUND_COLORS, TEXT_COLORS } from '../../constants/colors'
+import { TEXT_COLORS } from '../../constants/colors'
 
 import addButton from '../../assets/openspot-images/icons8-add-64.png'
 
@@ -65,7 +65,7 @@ export const NewSpot = () => {
         <ConfirmContainer onClick={handleAddSpot}>
           <AddImage src={addButton} alt="add" />
           <Description>
-            {newSpot == undefined ? '' : 'Presiona para confirmar'}
+            {newSpot == undefined ? '' : NEW_SPOT.CONFIRM_MESSAGE}
           </Description>
         </ConfirmContainer>
       )}
