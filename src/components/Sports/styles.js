@@ -88,7 +88,7 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 30% 55% 15%;
+  grid-template-columns: 15% 70% 15%;
 `
 
 export const TemperatureContainer = styled.div`
@@ -123,6 +123,7 @@ export const WeatherTitle = styled.label`
   font-weight: '600';
   text-transform: capitalize;
   margin-top: -5%;
+  text-wrap: nowrap;
 `
 
 export const WeatherImages = styled.img`
