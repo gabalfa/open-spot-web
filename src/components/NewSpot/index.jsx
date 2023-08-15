@@ -26,9 +26,12 @@ export const NewSpot = () => {
       <AutocompleteContainer>
         <GooglePlacesAutocomplete
           minLengthAutocomplete={3}
-          placeholder={language ? 'es' : 'en'}
           apiKey={import.meta.env.VITE_MAPS_API_KEY}
           selectProps={{
+            placeholder: NEW_SPOT.PLACEHOLDER,
+            isClearable: true,
+            escapeClearsValue: true,
+            instanceId: 'input-autocomplete',
             value: newSpot,
             onChange: setNewSpot,
             styles: {

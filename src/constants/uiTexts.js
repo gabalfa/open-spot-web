@@ -21,6 +21,7 @@ export const UI_TEXT_EN = {
   NEW_SPOT: {
     TITLE: 'Write the name of the place you are looking for',
     CONFIRM_MESSAGE: 'Press to confirm',
+    PLACEHOLDER: 'Search you spot',
   },
   BOTTOM_BAR: {
     ADD_BUTTON: 'Add a new Spot!',
@@ -60,6 +61,7 @@ export const UI_TEXT_ES = {
   NEW_SPOT: {
     TITLE: 'Escribe el nombre del lugar que buscas',
     CONFIRM_MESSAGE: 'Presiona para confirmar',
+    PLACEHOLDER: 'Busca tu lugar',
   },
   BOTTOM_BAR: {
     ADD_BUTTON: 'Agregate un Spot!',
