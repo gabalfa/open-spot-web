@@ -103,15 +103,16 @@ export const TemperatureContainer = styled.div`
 
 export const ForecastContainer = styled.div`
   display: flex;
-  border-radius: 8px;
-  /* border: 1px solid ${TEXT_COLORS.BLACK}; */
+  /* border-radius: 8px; */
+  /* border-top: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
+  /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   margin-left: 45px;
 `
 
 export const InnerForecastContainer = styled.div`
   display: grid;
   overflow: auto;
-  height: 65px;
+  height: 80px;
   width: 95%;
   margin-top: 10px;
   padding: 0 5px 0 10px;
