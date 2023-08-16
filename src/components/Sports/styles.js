@@ -102,7 +102,7 @@ export const TemperatureContainer = styled.div`
 `
 
 export const ForecastContainer = styled.div`
-  display: flex;
+  /* display: flex; */
 
   /* border-top: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
@@ -113,7 +113,7 @@ export const ForecastContainer = styled.div`
 export const InnerForecastContainer = styled.div`
   display: grid;
   overflow: auto;
-  height: 80px;
+  height: 70px;
   width: 95%;
   margin-top: 10px;
   padding: 0 5px 0 10px;
@@ -130,6 +130,15 @@ export const RowForecastContainer = styled.div`
   border-radius: 5px;
 `
 export const ForecastTitle = styled.label`
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: right;
+  color: ${TEXT_COLORS.BLACK};
+  font-size: 14px;
+  font-weight: 600;
+`
+
+export const ForecastDescription = styled.label`
   align-self: 'center';
   color: ${TEXT_COLORS.BLACK};
   font-size: 10px;
