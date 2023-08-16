@@ -105,7 +105,7 @@ export const ForecastContainer = styled.div`
   display: flex;
   border-radius: 8px;
   border: 2px solid ${TEXT_COLORS.BLUE_OWN};
-  margin-left: 40px;
+  margin-left: 45px;
 `
 
 export const InnerForecastContainer = styled.div`
