@@ -52,7 +52,7 @@ export const Card = styled.div`
       : `1px solid ${TEXT_COLORS.BLUE_OWN}`};
 
   padding: 10px 0;
-  height: ${(props) => (props.selected ? '140px' : '40px')};
+  height: ${(props) => (props.selected ? '145px' : '40px')};
 `
 
 export const SpotContainer = styled.div`
@@ -101,10 +101,34 @@ export const TemperatureContainer = styled.div`
   align-items: flex-start;
 `
 
-export const WeatherContainer = styled.div`
+export const ForecastContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  border-radius: 8px;
+  border: 2px solid ${TEXT_COLORS.BLUE_OWN};
+  margin-left: 30px;
+`
+
+export const InnerForecastContainer = styled.div`
+  display: grid;
+  overflow: auto;
+  height: 65px;
+  width: 95%;
+  margin-top: 10px;
+  padding: 0 5px 0 10px;
+`
+
+export const RowForecastContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  height: 20px;
+`
+export const ForecastTitle = styled.label`
+  align-self: 'center';
+  color: ${TEXT_COLORS.BLACK};
+  font-size: 10px;
+  text-transform: capitalize;
+  text-wrap: nowrap;
 `
 
 export const MapsContainer = styled.div`
@@ -175,4 +199,10 @@ export const NewButton = styled(Link)`
   padding: 20px;
 
   margin: 0px auto;
+`
+
+export const ForecastImages = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
 `

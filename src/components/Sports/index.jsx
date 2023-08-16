@@ -13,7 +13,11 @@ import {
   TitleSpot,
   DescriptionSpot,
   TemperatureContainer,
-  WeatherContainer,
+  ForecastContainer,
+  InnerForecastContainer,
+  RowForecastContainer,
+  ForecastTitle,
+  ForecastImages,
   MapsContainer,
   WeatherTitle,
   Temperature,
@@ -37,16 +41,9 @@ export const Sports = () => {
     currentWeather,
     currentForecast,
     removeFromSpots,
-    resetSelectedSpots,
   } = useSpots()
 
   const { SPOTS } = useConstants()
-
-  const resetSelected = () => {
-    if (currentWeather === undefined) {
-      resetSelectedSpots()
-    }
-  }
 
   // console.log(currentForecast)
   return (
@@ -91,12 +88,25 @@ export const Sports = () => {
                     {currentWeather?.weather[0].description}
                   </WeatherTitle>
                 </TemperatureContainer>
-                <WeatherContainer>
-                  {/* <WeatherImages src={currentWeather?.image} alt="weather" />
-                  <WeatherTitle>
-                    {currentWeather?.weather[0].description}
-                  </WeatherTitle> */}
-                </WeatherContainer>
+                <ForecastContainer>
+                  <InnerForecastContainer>
+                    {currentForecast?.map((forecast, index) => {
+                      return (
+                        <RowForecastContainer key={index}>
+                          <ForecastTitle>
+                            {`${
+                              forecast?.celsiusTemperature
+                            } - ${forecast?.dt_txt.slice(11)} - ${
+                              forecast?.weather[0].description
+                            }`}
+                          </ForecastTitle>
+
+                          <ForecastImages src={forecast?.image} />
+                        </RowForecastContainer>
+                      )
+                    })}
+                  </InnerForecastContainer>
+                </ForecastContainer>
                 <MapsContainer>
                   {/* <Anchor
                     target="_blank"

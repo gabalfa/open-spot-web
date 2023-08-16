@@ -31,7 +31,6 @@ export const NewSpot = () => {
             placeholder: NEW_SPOT.PLACEHOLDER,
             isClearable: true,
             escapeClearsValue: true,
-            instanceId: 'input-autocomplete',
             value: newSpot,
             onChange: setNewSpot,
             styles: {
