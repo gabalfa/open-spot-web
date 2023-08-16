@@ -104,7 +104,7 @@ export const TemperatureContainer = styled.div`
 export const ForecastContainer = styled.div`
   display: flex;
   border-radius: 8px;
-  border: 2px solid ${TEXT_COLORS.BLUE_OWN};
+  /* border: 1px solid ${TEXT_COLORS.BLACK}; */
   margin-left: 45px;
 `
 
