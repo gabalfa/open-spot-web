@@ -13,7 +13,7 @@ export const UI_TEXT_EN = {
     TITLE:
       'We give you the weather forecast and routes to go to your favorite places!!',
 
-    FORECAST_TITLE: 'Forecast Weather',
+    FORECAST_TITLE: 'Weather forecast',
     NO_SPOTS_MESSAGE: 'Let´s to add some spots',
   },
   OPEN_SPOT_BAR: {
@@ -54,7 +54,7 @@ export const UI_TEXT_ES = {
   SPOTS: {
     TITLE:
       'Te damos el pronostico del tiempo y rutas para ir a tus lugares favoritos!',
-    FORECAST_TITLE: 'Pronostico del Tiempo',
+    FORECAST_TITLE: 'Pronóstico del tiempo',
     NO_SPOTS_MESSAGE: 'Agregate unos spots',
   },
   OPEN_SPOT_BAR: {
