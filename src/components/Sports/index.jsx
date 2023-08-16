@@ -96,7 +96,7 @@ export const Sports = () => {
                           <ForecastTitle>
                             {`${
                               forecast?.celsiusTemperature
-                            } - ${forecast?.dt_txt.slice(11)} - ${
+                            } / ${forecast?.dt_txt.slice(11, 16)} - ${
                               forecast?.weather[0].description
                             }`}
                           </ForecastTitle>
