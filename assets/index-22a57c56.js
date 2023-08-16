@@ -442,6 +442,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   /* border-bottom: 1px solid ${X.BLUE_OWN}; */
   margin-left: 45px;
   width: 85%;
+  margin-top: 5px;
 `,Nx=R.div`
   display: grid;
   overflow: auto;
