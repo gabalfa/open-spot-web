@@ -18,6 +18,7 @@ import {
   RowForecastContainer,
   ForecastTitle,
   ForecastDescription,
+  ForecastDate,
   ForecastTemperature,
   ForecastImages,
   MapsContainer,
@@ -47,7 +48,7 @@ export const Sports = () => {
 
   const { SPOTS } = useConstants()
 
-  // console.log(currentForecast)
+  console.log(currentForecast)
   return (
     <Container>
       <Title>{SPOTS.TITLE}</Title>
@@ -95,18 +96,28 @@ export const Sports = () => {
                   <InnerForecastContainer>
                     {currentForecast?.map((forecast, index) => {
                       return (
-                        <RowForecastContainer key={index} res={index % 2}>
-                          <ForecastTemperature>
-                            {forecast?.celsiusTemperature}
-                          </ForecastTemperature>
-                          <ForecastDescription>
-                            {`${forecast?.dt_txt.slice(11, 16)} UTC - ${
-                              forecast?.weather[0].description
-                            }`}
-                          </ForecastDescription>
+                        <>
+                          {index % 8 === 0 ? (
+                            <ForecastDate>
+                              {forecast?.dt_txt.slice(0, 10)}
+                            </ForecastDate>
+                          ) : (
+                            <></>
+                          )}
 
-                          <ForecastImages src={forecast?.image} />
-                        </RowForecastContainer>
+                          <RowForecastContainer key={index} res={index % 2}>
+                            <ForecastTemperature>
+                              {forecast?.celsiusTemperature}
+                            </ForecastTemperature>
+                            <ForecastDescription>
+                              {`${forecast?.dt_txt.slice(11, 16)} UTC - ${
+                                forecast?.weather[0].description
+                              }`}
+                            </ForecastDescription>
+
+                            <ForecastImages src={forecast?.image} />
+                          </RowForecastContainer>
+                        </>
                       )
                     })}
                   </InnerForecastContainer>

@@ -136,6 +136,7 @@ export const ForecastTitle = styled.label`
   margin-bottom: 5px;
   float: right;
   color: ${TEXT_COLORS.BLACK};
+
   font-size: 14px;
   font-weight: 600;
 `
@@ -144,6 +145,14 @@ export const ForecastTemperature = styled.label`
   color: ${TEXT_COLORS.HEADER};
   font-size: 12px;
   font-weight: 600;
+`
+
+export const ForecastDate = styled.label`
+  color: ${TEXT_COLORS.BLUE_OWN};
+  font-size: 10px;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-top: 10px;
 `
 
 export const ForecastDescription = styled.label`
