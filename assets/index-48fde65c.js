@@ -421,7 +421,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   color: ${X.BLACK};
   font-size: 12px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 30px;
   &:hover {
     color: ${X.HEADER};
@@ -430,7 +430,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   /* transition: color 0.9ms ease; */
 `,Lx=R.div`
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 25% 60% 15%;
 `,Ix=R.div`
   display: flex;
   flex-direction: column;
@@ -440,14 +440,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   /* border-top: 1px solid ${X.BLUE_OWN}; */
   /* border-bottom: 1px solid ${X.BLUE_OWN}; */
-  margin-left: 45px;
-  width: 85%;
+  /* margin-left: 45px; */
+  width: 100%;
   margin-top: 6px;
 `,Nx=R.div`
   display: grid;
   overflow: auto;
   height: 70px;
-  width: 95%;
+  width: 100%;
   margin-top: 10px;
   padding: 0 5px 0 10px;
 `,_x=R.div`
@@ -458,6 +458,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   height: 25px;
   padding-left: 10px;
   border-radius: 5px;
+  width: 90%;
 `,Dx=R.label`
   margin-right: 5px;
   margin-bottom: 5px;
@@ -466,29 +467,30 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-size: 14px;
   font-weight: 600;
 `,Fx=R.label`
-  align-self: 'center';
+  color: ${X.HEADER};
+  font-size: 12px;
+  font-weight: 600;
+`,jx=R.label`
   color: ${X.BLACK};
   font-size: 10px;
   text-transform: capitalize;
   text-wrap: nowrap;
-`,jx=R.div`
+`,zx=R.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-`,zx=R.label`
+`,Bx=R.label`
   color: var(--grey, #48484a);
   font-size: 30px;
-  font-weight: '600';
-`,Bx=R.label`
+`,Ux=R.label`
   align-self: 'center';
   color: ${X.BLACK};
   font-size: 12px;
-  font-weight: '600';
   text-transform: capitalize;
   margin-top: -5%;
   text-wrap: nowrap;
-`,Ux=R.img`
+`,Vx=R.img`
   width: 50px;
   height: 50px;
   margin-top: -10%;
@@ -496,17 +498,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,$d=R.img`
   width: 15px;
   height: 15px;
-`,Vx=R.img`
+`,$x=R.img`
   width: 35px;
   height: 35px;
-`,$x=R.img`
+`,Hx=R.img`
   width: 25px;
   height: 25px;
-`,Hx=R.a`
+`,Wx=R.a`
   color: var(--grey, #9699aa);
   font-size: 12px;
   text-decoration: none;
-`,Wx=R(Vl)`
+`,Kx=R(Vl)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -523,28 +525,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   padding: 20px;
 
   margin: 0px auto;
-`,Kx=R.img`
+`,Yx=R.img`
   width: 30px;
   height: 30px;
-`,Yx="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaElEQVR4nO2XTWsTQRyH9yMINplZFZpKPoD04ElaFMRTPegHENGD6E2RmWxbdqa19VKb7WuyGz+Cp/oBxGuKFXpoLWl2ghV68AXapJkIbUdW3YCVdF+ybXdgH/jDQhJ4HhICP0VJSIgn02j64fLo2O7yyPiO86zIhPHcePyNaIctioVzP4gmDGQ8U2SUb8kUYXSQlyKiPDJ5+7veWd69bX348Kb2ZkiJE02aG2wQzL3k3btFlvi5iZVBJS7ynOCGX/kNOiYuviyL81OrjZ6ZtbONaOroGqeo7leeUSr6J9+LnqlVkTbWRWr20x5Y3LwhpXx6bkOAhYoAi5t7wGTXpZSHhaqARVuAQvX0IqKWh86ZTADTPvmIoPJ1mtu+OvHui5c8bN8JRgSVb1G8xXWcBfmPmZSxxrzk1b8HLRZ9RFh59/Mgv55Jz1eYl7xq1X5fpBHdyrcjCiwDi1X2R97uKK9GGRGVvAuct3uhaTMveTWKCK7jy1HKu6RKlSwosi0vebV9rA6sWl/wAIKeRC3vcqlUyUInwvKSb38TjwIH/NS1fk7wflj5V7nZB84aK4+O7zjP/0d8zkLTR4TJ9i9Y7IoSBk7wfU7RQVB5Zxd81Yf/WWR5PPP06Pvga7tXtWrsmJ/PATTte6HkfUT4kg8fwbqXPyYikHzwCBadvEuLoruc4BVO0VvnH+ro62XtxVA3iwxYtT5osiVosQ+wxO4op0lTRwPyLjIdDci9yAjelXeRkfDyySILS7LIFpJFFpxkkSnJIgtOsshkX2RexHqR+QXGcZEFBcZpkYUFxmGRdQs4y0WWkKDIyy+fosW0yJlW7gAAAABJRU5ErkJggg==",Gx="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABf0lEQVR4nO2WsU7DMBCG/R5I7YJ4F3ihWCzNSQxM2ehMQgVqKSNDkYrEq5CMINEB+ZzFKGksICROq8SJqe6X/ik3/J/vfA5jJBKJpCXA8xG4MlkAv2T/NTwOBTEO47NRmMSjKFG9OEzi8XV82hlAr+Ej7fi1O4Dewye5CaCsXS9pWzNbIgCgDrQTjRDQCLXT4Y/QVaC6qGFDAMj1SqUSlVze1Yeb36gUUcmXtVsAMgufplvXQRThdZ0JgvUKMA1+BcuNqHAx+65ZzKprpoEDAPnpRn8D6k6UTl5/w+WtIx0wQsit9wiPg26hKog9w+Pgf6MZRPnUi27sEh6HB6iY+QLAuGLBBYC68E0rFlwAqNk2VZe4CYL1DmBalaYVCy4AHMJDJp8em1dlqRPyeeVIB35CNO35AsIUHul3uu070IGZLREAUAfaSYC3sT1GwucfNgEerAOAd28NACf8BH3vzV54/i4m/JjZ1OfF+ZHw+bzLcRLgbbKTtx6eRCIx5/QFk1NxCxmBF0gAAAAASUVORK5CYII=",Qx=()=>{const{spots:e,setCurrentSpot:t,currentWeather:n,currentForecast:r,removeFromSpots:o}=Sc(),{SPOTS:i}=jo();return b.jsxs(Ex,{children:[b.jsx(Cx,{children:i.TITLE}),b.jsxs(kx,{children:[e.length>0?b.jsx(b.Fragment,{}):b.jsx(Wx,{to:"/open-spot-web/new-spot",children:i.NO_SPOTS_MESSAGE}),e.map(l=>b.jsxs(Ax,{onClick:()=>t(l),selected:l.selected,children:[b.jsxs(Ox,{children:[b.jsxs(Px,{children:[b.jsx(Rx,{children:l.name}),b.jsx(Tx,{children:`${l.country} / ${l.city}`})]}),b.jsx(bx,{children:l.selected&&n!==void 0?b.jsx($d,{src:Yx,alt:"arrow"}):b.jsx($d,{src:Sx,alt:"arrow"})})]}),l.selected&&n!==void 0?b.jsxs(Lx,{children:[b.jsxs(Ix,{children:[b.jsx(zx,{children:n==null?void 0:n.celsiusTemperature}),b.jsx(Ux,{src:n==null?void 0:n.image,alt:"weather"}),b.jsx(Bx,{children:n==null?void 0:n.weather[0].description})]}),b.jsxs(Mx,{children:[b.jsx(Dx,{children:i.FORECAST_TITLE}),b.jsx(Nx,{children:r==null?void 0:r.map((a,s)=>b.jsxs(_x,{res:s%2,children:[b.jsx(Fx,{children:`${a==null?void 0:a.celsiusTemperature} / ${a==null?void 0:a.dt_txt.slice(11,16)} - ${a==null?void 0:a.weather[0].description}`}),b.jsx(Kx,{src:a==null?void 0:a.image})]},s))})]}),b.jsxs(jx,{children:[b.jsx(Hx,{target:"_blank",rel:"noopener",href:`https://www.waze.com/ul?ll=${l==null?void 0:l.location.latitude},${l==null?void 0:l.location.longitude}&navigate=yes`,children:b.jsx(Vx,{src:xx,alt:"waze"})}),b.jsx($x,{onClick:()=>{o(l.guid)},src:Gx,alt:"remove"})]})]}):b.jsx(b.Fragment,{})]},l.guid))]})]})},Xx=R.div`
+`,Gx="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaElEQVR4nO2XTWsTQRyH9yMINplZFZpKPoD04ElaFMRTPegHENGD6E2RmWxbdqa19VKb7WuyGz+Cp/oBxGuKFXpoLWl2ghV68AXapJkIbUdW3YCVdF+ybXdgH/jDQhJ4HhICP0VJSIgn02j64fLo2O7yyPiO86zIhPHcePyNaIctioVzP4gmDGQ8U2SUb8kUYXSQlyKiPDJ5+7veWd69bX348Kb2ZkiJE02aG2wQzL3k3btFlvi5iZVBJS7ynOCGX/kNOiYuviyL81OrjZ6ZtbONaOroGqeo7leeUSr6J9+LnqlVkTbWRWr20x5Y3LwhpXx6bkOAhYoAi5t7wGTXpZSHhaqARVuAQvX0IqKWh86ZTADTPvmIoPJ1mtu+OvHui5c8bN8JRgSVb1G8xXWcBfmPmZSxxrzk1b8HLRZ9RFh59/Mgv55Jz1eYl7xq1X5fpBHdyrcjCiwDi1X2R97uKK9GGRGVvAuct3uhaTMveTWKCK7jy1HKu6RKlSwosi0vebV9rA6sWl/wAIKeRC3vcqlUyUInwvKSb38TjwIH/NS1fk7wflj5V7nZB84aK4+O7zjP/0d8zkLTR4TJ9i9Y7IoSBk7wfU7RQVB5Zxd81Yf/WWR5PPP06Pvga7tXtWrsmJ/PATTte6HkfUT4kg8fwbqXPyYikHzwCBadvEuLoruc4BVO0VvnH+ro62XtxVA3iwxYtT5osiVosQ+wxO4op0lTRwPyLjIdDci9yAjelXeRkfDyySILS7LIFpJFFpxkkSnJIgtOsshkX2RexHqR+QXGcZEFBcZpkYUFxmGRdQs4y0WWkKDIyy+fosW0yJlW7gAAAABJRU5ErkJggg==",Qx="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABf0lEQVR4nO2WsU7DMBCG/R5I7YJ4F3ihWCzNSQxM2ehMQgVqKSNDkYrEq5CMINEB+ZzFKGksICROq8SJqe6X/ik3/J/vfA5jJBKJpCXA8xG4MlkAv2T/NTwOBTEO47NRmMSjKFG9OEzi8XV82hlAr+Ej7fi1O4Dewye5CaCsXS9pWzNbIgCgDrQTjRDQCLXT4Y/QVaC6qGFDAMj1SqUSlVze1Yeb36gUUcmXtVsAMgufplvXQRThdZ0JgvUKMA1+BcuNqHAx+65ZzKprpoEDAPnpRn8D6k6UTl5/w+WtIx0wQsit9wiPg26hKog9w+Pgf6MZRPnUi27sEh6HB6iY+QLAuGLBBYC68E0rFlwAqNk2VZe4CYL1DmBalaYVCy4AHMJDJp8em1dlqRPyeeVIB35CNO35AsIUHul3uu070IGZLREAUAfaSYC3sT1GwucfNgEerAOAd28NACf8BH3vzV54/i4m/JjZ1OfF+ZHw+bzLcRLgbbKTtx6eRCIx5/QFk1NxCxmBF0gAAAAASUVORK5CYII=",Xx=()=>{const{spots:e,setCurrentSpot:t,currentWeather:n,currentForecast:r,removeFromSpots:o}=Sc(),{SPOTS:i}=jo();return b.jsxs(Ex,{children:[b.jsx(Cx,{children:i.TITLE}),b.jsxs(kx,{children:[e.length>0?b.jsx(b.Fragment,{}):b.jsx(Kx,{to:"/open-spot-web/new-spot",children:i.NO_SPOTS_MESSAGE}),e.map(l=>b.jsxs(Ax,{onClick:()=>t(l),selected:l.selected,children:[b.jsxs(Ox,{children:[b.jsxs(Px,{children:[b.jsx(Rx,{children:l.name}),b.jsx(Tx,{children:`${l.country} / ${l.city}`})]}),b.jsx(bx,{children:l.selected&&n!==void 0?b.jsx($d,{src:Gx,alt:"arrow"}):b.jsx($d,{src:Sx,alt:"arrow"})})]}),l.selected&&n!==void 0?b.jsxs(Lx,{children:[b.jsxs(Ix,{children:[b.jsx(Bx,{children:n==null?void 0:n.celsiusTemperature}),b.jsx(Vx,{src:n==null?void 0:n.image,alt:"weather"}),b.jsx(Ux,{children:n==null?void 0:n.weather[0].description})]}),b.jsxs(Mx,{children:[b.jsx(Dx,{children:i.FORECAST_TITLE}),b.jsx(Nx,{children:r==null?void 0:r.map((a,s)=>b.jsxs(_x,{res:s%2,children:[b.jsx(Fx,{children:a==null?void 0:a.celsiusTemperature}),b.jsx(jx,{children:`${a==null?void 0:a.dt_txt.slice(11,16)} UTC - ${a==null?void 0:a.weather[0].description}`}),b.jsx(Yx,{src:a==null?void 0:a.image})]},s))})]}),b.jsxs(zx,{children:[b.jsx(Wx,{target:"_blank",rel:"noopener",href:`https://www.waze.com/ul?ll=${l==null?void 0:l.location.latitude},${l==null?void 0:l.location.longitude}&navigate=yes`,children:b.jsx($x,{src:xx,alt:"waze"})}),b.jsx(Hx,{onClick:()=>{o(l.guid)},src:Qx,alt:"remove"})]})]}):b.jsx(b.Fragment,{})]},l.guid))]})]})},Jx=R.div`
   display: grid;
   grid-template-rows: 20% 20% 60%;
   height: 70%;
   width: 100%;
   @media screen and (min-width: 768px) {
   }
-`,Jx=R.label`
+`,Zx=R.label`
   color: ${X.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   line-height: normal;
-`,Zx=R.div`
+`,qx=R.div`
   height: 50px;
   @media screen and (min-width: 768px) {
   }
-`,qx=R.label`
+`,eE=R.label`
   color: ${X.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
@@ -552,14 +554,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-`,eE=R.img`
+`,tE=R.img`
   width: 50px;
   height: 50px;
-`,tE=R.div`
+`,nE=R.div`
   align-items: center;
   justify-content: center;
   display: flex;
-`,nE="data:image/png;base64,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",rE=()=>{const{language:e,newSpot:t,setNewSpot:n,handleAddSpot:r}=Sc(),{NEW_SPOT:o}=jo();return b.jsxs(Xx,{children:[b.jsx(Jx,{children:o.TITLE}),b.jsx(Zx,{children:b.jsx(cx,{minLengthAutocomplete:3,apiKey:"AIzaSyByTcAtF6vQA95A7ojFpu7_u1qn0iNOhRY",selectProps:{placeholder:o.PLACEHOLDER,isClearable:!0,escapeClearsValue:!0,value:t,onChange:n,styles:{input:i=>({...i,fontSize:"14px",color:X.BLACK,height:"30px"}),option:i=>({...i,fontSize:"12px",color:X.HEADER,height:"50px",borderBottom:"1px solid #9699aa"}),singleValue:i=>({...i,fontSize:"16px",color:X.HEADER})}},apiOptions:{language:e?"es":"en",region:e?"us":"en"}})}),t==null?b.jsx(b.Fragment,{}):b.jsxs(tE,{onClick:r,children:[b.jsx(eE,{src:nE,alt:"add"}),b.jsx(qx,{children:t==null?"":o.CONFIRM_MESSAGE})]})]})},oE=R.div`
+`,rE="data:image/png;base64,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",oE=()=>{const{language:e,newSpot:t,setNewSpot:n,handleAddSpot:r}=Sc(),{NEW_SPOT:o}=jo();return b.jsxs(Jx,{children:[b.jsx(Zx,{children:o.TITLE}),b.jsx(qx,{children:b.jsx(cx,{minLengthAutocomplete:3,apiKey:"AIzaSyByTcAtF6vQA95A7ojFpu7_u1qn0iNOhRY",selectProps:{placeholder:o.PLACEHOLDER,isClearable:!0,escapeClearsValue:!0,value:t,onChange:n,styles:{input:i=>({...i,fontSize:"14px",color:X.BLACK,height:"30px"}),option:i=>({...i,fontSize:"12px",color:X.HEADER,height:"50px",borderBottom:"1px solid #9699aa"}),singleValue:i=>({...i,fontSize:"16px",color:X.HEADER})}},apiOptions:{language:e?"es":"en",region:e?"us":"en"}})}),t==null?b.jsx(b.Fragment,{}):b.jsxs(nE,{onClick:r,children:[b.jsx(tE,{src:rE,alt:"add"}),b.jsx(eE,{children:t==null?"":o.CONFIRM_MESSAGE})]})]})},iE=R.div`
   display: grid;
   grid-template-rows: 20% 20% 60%;
   text-align: center;
@@ -568,7 +570,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   @media screen and (min-width: 768px) {
   }
-`,iE=R.label`
+`,lE=R.label`
   color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
@@ -577,7 +579,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-weight: 700;
   line-height: normal;
   transition: color 1s ease;
-`,lE=R.label`
+`,aE=R.label`
   color: ${X.BLACK};
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
@@ -586,7 +588,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-weight: 700;
   line-height: normal;
   transition: color 1s ease;
-`,aE=R.label`
+`,sE=R.label`
   color: var(--grey, #9699aa);
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Roboto;
@@ -596,7 +598,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   line-height: 25px;
 `;R.img`
   margin: 0 auto;
-`;const Hd=()=>{const{WELLCOME:e}=jo();return b.jsxs(oE,{children:[b.jsx(iE,{children:e.TITLE}),b.jsx(lE,{children:"Open Spot"}),b.jsx(aE,{children:e.DESCRIPTION})]})},sE=fw`
+`;const Hd=()=>{const{WELLCOME:e}=jo();return b.jsxs(iE,{children:[b.jsx(lE,{children:e.TITLE}),b.jsx(aE,{children:"Open Spot"}),b.jsx(sE,{children:e.DESCRIPTION})]})},uE=fw`
   body {
     display: flex;
     justify-content: center;
@@ -610,4 +612,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     left: 0;
     right: 0;
   }
-`,uE=()=>b.jsxs(u1,{children:[b.jsx(sE,{}),b.jsx(Zy,{children:b.jsxs(Ky,{children:[b.jsxs($n,{path:"/",element:b.jsx(wx,{}),children:[b.jsx($n,{path:"/open-spot-web/sports",element:b.jsx(Qx,{})}),b.jsx($n,{path:"/open-spot-web/new-spot",element:b.jsx(rE,{})}),b.jsx($n,{path:"*",element:b.jsx(Hd,{})})]}),b.jsx($n,{path:"*",element:b.jsx(Hd,{})})]})})]});Wa.createRoot(document.getElementById("root")).render(b.jsx(ut.StrictMode,{children:b.jsx(uE,{})}));
+`,cE=()=>b.jsxs(u1,{children:[b.jsx(uE,{}),b.jsx(Zy,{children:b.jsxs(Ky,{children:[b.jsxs($n,{path:"/",element:b.jsx(wx,{}),children:[b.jsx($n,{path:"/open-spot-web/sports",element:b.jsx(Xx,{})}),b.jsx($n,{path:"/open-spot-web/new-spot",element:b.jsx(oE,{})}),b.jsx($n,{path:"*",element:b.jsx(Hd,{})})]}),b.jsx($n,{path:"*",element:b.jsx(Hd,{})})]})})]});Wa.createRoot(document.getElementById("root")).render(b.jsx(ut.StrictMode,{children:b.jsx(cE,{})}));
