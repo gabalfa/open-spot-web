@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { TEXT_COLORS } from '../../constants/colors'
+import { TEXT_COLORS, BACKGROUND_COLORS } from '../../constants/colors'
 
 export const Container = styled.div`
   display: grid;
@@ -103,7 +103,7 @@ export const TemperatureContainer = styled.div`
 
 export const ForecastContainer = styled.div`
   display: flex;
-  /* border-radius: 8px; */
+
   /* border-top: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   margin-left: 45px;
@@ -119,10 +119,14 @@ export const InnerForecastContainer = styled.div`
 `
 
 export const RowForecastContainer = styled.div`
+  background-color: ${(props) =>
+    props.res ? BACKGROUND_COLORS.DIVIDER : BACKGROUND_COLORS.BLANK};
   display: flex;
   justify-content: space-between;
-  text-align: right;
-  height: 20px;
+  align-items: center;
+  height: 25px;
+  padding-left: 10px;
+  border-radius: 5px;
 `
 export const ForecastTitle = styled.label`
   align-self: 'center';
@@ -205,5 +209,4 @@ export const NewButton = styled(Link)`
 export const ForecastImages = styled.img`
   width: 30px;
   height: 30px;
-  margin-top: -10px;
 `

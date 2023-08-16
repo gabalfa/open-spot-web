@@ -92,7 +92,7 @@ export const Sports = () => {
                   <InnerForecastContainer>
                     {currentForecast?.map((forecast, index) => {
                       return (
-                        <RowForecastContainer key={index}>
+                        <RowForecastContainer key={index} res={index % 2}>
                           <ForecastTitle>
                             {`${
                               forecast?.celsiusTemperature
