@@ -82,7 +82,7 @@ export const DescriptionSpot = styled.label`
   color: ${TEXT_COLORS.BLACK};
   font-size: 12px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 30px;
   &:hover {
     color: ${TEXT_COLORS.HEADER};
@@ -92,7 +92,7 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 25% 60% 15%;
 `
 
 export const TemperatureContainer = styled.div`
@@ -106,8 +106,8 @@ export const ForecastContainer = styled.div`
 
   /* border-top: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
-  margin-left: 45px;
-  width: 85%;
+  /* margin-left: 45px; */
+  width: 100%;
   margin-top: 6px;
 `
 
@@ -115,7 +115,7 @@ export const InnerForecastContainer = styled.div`
   display: grid;
   overflow: auto;
   height: 70px;
-  width: 95%;
+  width: 100%;
   margin-top: 10px;
   padding: 0 5px 0 10px;
 `
@@ -129,6 +129,7 @@ export const RowForecastContainer = styled.div`
   height: 25px;
   padding-left: 10px;
   border-radius: 5px;
+  width: 90%;
 `
 export const ForecastTitle = styled.label`
   margin-right: 5px;
@@ -139,8 +140,13 @@ export const ForecastTitle = styled.label`
   font-weight: 600;
 `
 
+export const ForecastTemperature = styled.label`
+  color: ${TEXT_COLORS.HEADER};
+  font-size: 12px;
+  font-weight: 600;
+`
+
 export const ForecastDescription = styled.label`
-  align-self: 'center';
   color: ${TEXT_COLORS.BLACK};
   font-size: 10px;
   text-transform: capitalize;
@@ -157,14 +163,12 @@ export const MapsContainer = styled.div`
 export const Temperature = styled.label`
   color: var(--grey, #48484a);
   font-size: 30px;
-  font-weight: '600';
 `
 
 export const WeatherTitle = styled.label`
   align-self: 'center';
   color: ${TEXT_COLORS.BLACK};
   font-size: 12px;
-  font-weight: '600';
   text-transform: capitalize;
   margin-top: -5%;
   text-wrap: nowrap;

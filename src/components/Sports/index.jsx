@@ -18,6 +18,7 @@ import {
   RowForecastContainer,
   ForecastTitle,
   ForecastDescription,
+  ForecastTemperature,
   ForecastImages,
   MapsContainer,
   WeatherTitle,
@@ -95,10 +96,11 @@ export const Sports = () => {
                     {currentForecast?.map((forecast, index) => {
                       return (
                         <RowForecastContainer key={index} res={index % 2}>
+                          <ForecastTemperature>
+                            {forecast?.celsiusTemperature}
+                          </ForecastTemperature>
                           <ForecastDescription>
-                            {`${
-                              forecast?.celsiusTemperature
-                            } / ${forecast?.dt_txt.slice(11, 16)} - ${
+                            {`${forecast?.dt_txt.slice(11, 16)} UTC - ${
                               forecast?.weather[0].description
                             }`}
                           </ForecastDescription>
