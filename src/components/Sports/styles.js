@@ -92,7 +92,7 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 25% 60% 15%;
+  grid-template-columns: 25% 65% 10%;
 `
 
 export const TemperatureContainer = styled.div`
@@ -166,7 +166,7 @@ export const MapsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
 `
 
 export const Temperature = styled.label`

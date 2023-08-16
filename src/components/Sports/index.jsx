@@ -35,6 +35,7 @@ import {
 import downArrow from '../../assets/openspot-images/icons8-double-down-48.png'
 import leftArrow from '../../assets/openspot-images/icons8-double-up-48.png'
 import waze from '../../assets/openspot-images/icons8-waze-48.png'
+import maps from '../../assets/openspot-images/icons8-google-maps-100.png'
 import remove from '../../assets/openspot-images/icons8-remove-48.png'
 
 export const Sports = () => {
@@ -123,14 +124,13 @@ export const Sports = () => {
                   </InnerForecastContainer>
                 </ForecastContainer>
                 <MapsContainer>
-                  {/* <Anchor
+                  <Anchor
                     target="_blank"
                     rel="noopener"
-                    href={`https://www.google.com/maps?q=${item?.location.latitude},${item?.location.longitude}`}
+                    href={`https://www.google.com/maps/search/?api=1&query=${item?.location.latitude},${item?.location.longitude}`}
                   >
                     <OpenWithImages src={maps} alt="maps" />
-                    Maps
-                  </Anchor> */}
+                  </Anchor>
                   <Anchor
                     target="_blank"
                     rel="noopener"
