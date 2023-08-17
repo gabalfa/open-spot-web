@@ -105,7 +105,8 @@ export function useSpots() {
                 : forecast?.dt_txt.slice(8, 10))
 
             moment.locale('es')
-            const formattedDate = moment(localDate).format('ll')
+
+            const formattedDate = moment(localDate).format('MMM ddd DD YYYY')
             // console.log('localDt::', formattedDate)
 
             return {
