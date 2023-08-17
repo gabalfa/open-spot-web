@@ -116,7 +116,7 @@ export const ForecastContainer = styled.div`
 export const InnerForecastContainer = styled.div`
   display: grid;
   overflow: auto;
-  height: 70px;
+  height: 80px;
   width: 100%;
   /* margin-top: 10px; */
   padding: 0 5px 0 10px;
