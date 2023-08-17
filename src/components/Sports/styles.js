@@ -51,7 +51,7 @@ export const Card = styled.div`
       : `1px solid ${TEXT_COLORS.BLUE_OWN}`};
 
   padding: 10px 0;
-  height: ${(props) => (props.selected ? '145px' : '40px')};
+  height: ${(props) => (props.selected ? '150px' : '45px')};
 `
 
 export const SpotContainer = styled.div`
@@ -82,7 +82,7 @@ export const DescriptionSpot = styled.label`
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 20px;
   &:hover {
     color: ${TEXT_COLORS.HEADER};
     /* transition: color 0.9ms ease; */
@@ -91,7 +91,7 @@ export const DescriptionSpot = styled.label`
 `
 export const DetailContainer = styled.div`
   display: grid;
-  grid-template-columns: 25% 65% 10%;
+  grid-template-columns: 30% 60% 10%;
 `
 
 export const TemperatureContainer = styled.div`
@@ -117,7 +117,7 @@ export const ForecastContainer = styled.div`
 export const InnerForecastContainer = styled.div`
   display: grid;
   overflow: auto;
-  height: 80px;
+  height: 85px;
   width: 95%;
   /* margin-top: 10px; */
   padding: 0 5px 0 10px;
