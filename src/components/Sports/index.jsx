@@ -49,7 +49,7 @@ export const Sports = () => {
 
   const { SPOTS } = useConstants()
 
-  console.log(currentForecast)
+  // console.log(currentForecast)
   return (
     <Container>
       <Title>{SPOTS.TITLE}</Title>
@@ -98,22 +98,22 @@ export const Sports = () => {
                     {currentForecast?.map((forecast, index) => {
                       return (
                         <>
-                          {index % 8 === 0 ? (
-                            <ForecastDate>
-                              {forecast?.dt_txt.slice(0, 10)}
-                            </ForecastDate>
-                          ) : (
-                            <></>
-                          )}
+                          {
+                            // index % 8 === 0 && index > 0
+                            currentForecast[index - 1]?.localDate !==
+                            currentForecast[index]?.localDate ? (
+                              <ForecastDate>{forecast?.localDate}</ForecastDate>
+                            ) : (
+                              <></>
+                            )
+                          }
 
                           <RowForecastContainer key={index} res={index % 2}>
                             <ForecastTemperature>
                               {forecast?.celsiusTemperature}
                             </ForecastTemperature>
                             <ForecastDescription>
-                              {`${forecast?.dt_txt.slice(11, 16)} UTC - ${
-                                forecast?.weather[0].description
-                              }`}
+                              {`${forecast?.localTime} - ${forecast?.weather[0].description}`}
                             </ForecastDescription>
 
                             <ForecastImages src={forecast?.image} />

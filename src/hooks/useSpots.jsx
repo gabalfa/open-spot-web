@@ -90,11 +90,28 @@ export function useSpots() {
         .then((json) => {
           const { list } = json
           const newList = list.map((forecast) => {
+            const localDT = new Date()
+            const utcTime = Number(forecast?.dt_txt.slice(11, 13))
+
+            const gmtDiff = Number(localDT.toString().slice(28, 31))
+            const diffTime = utcTime + gmtDiff
+            const localTime = (diffTime > 0 ? diffTime : 24 + diffTime) + ':00'
+
+            const localDate =
+              forecast?.dt_txt.slice(0, 8) +
+              (diffTime < 0
+                ? Number(forecast?.dt_txt.slice(8, 10)) - 1
+                : forecast?.dt_txt.slice(8, 10))
+
+            // console.log('localTime::', localTime + ' - ' + localDate)
+
             return {
               ...forecast,
               celsiusTemperature: `${Math.round(
                 parseFloat(forecast.main.temp) - 273.15
               )}°`,
+              localTime,
+              localDate,
               image: `${URL_WEATHER_IMG}/img/wn/${forecast.weather[0].icon}@4x.png`,
             }
           })

@@ -122,7 +122,7 @@ export const InnerForecastContainer = styled.div`
 
 export const RowForecastContainer = styled.div`
   background-color: ${(props) =>
-    props.res ? BACKGROUND_COLORS.DIVIDER : BACKGROUND_COLORS.BLANK};
+    props.res ? BACKGROUND_COLORS.BLANK : BACKGROUND_COLORS.DIVIDER};
   display: flex;
   justify-content: space-between;
   align-items: center;
