@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
 import moment from 'moment'
+import 'moment/locale/es'
 
 import { GlobalContext } from '../context/Global'
 
@@ -103,11 +104,8 @@ export function useSpots() {
               (diffTime < 0
                 ? Number(forecast?.dt_txt.slice(8, 10)) - 1
                 : forecast?.dt_txt.slice(8, 10))
-
-            moment.locale('es')
-
+            moment.locale(language.toLowerCase)
             const formattedDate = moment(localDate).format('MMM ddd DD YYYY')
-            // console.log('localDt::', formattedDate)
 
             return {
               ...forecast,

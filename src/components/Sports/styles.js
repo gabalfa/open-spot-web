@@ -33,7 +33,6 @@ export const Description = styled.label`
 export const CardsContainer = styled.div`
   height: auto;
   width: 100%;
-  margin-top: 40px;
   overflow: auto;
   text-align: center;
 `
@@ -122,7 +121,7 @@ export const InnerForecastContainer = styled.div`
 
 export const RowForecastContainer = styled.div`
   background-color: ${(props) =>
-    props.res ? BACKGROUND_COLORS.BLANK : BACKGROUND_COLORS.DIVIDER};
+    props.pair ? `${BACKGROUND_COLORS.DIVIDER}` : `${BACKGROUND_COLORS.BLANK}`};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,9 +131,9 @@ export const RowForecastContainer = styled.div`
   width: 90%;
 `
 export const ForecastTitle = styled.label`
-  margin-right: 5px;
+  margin-left: 20px;
   margin-bottom: 5px;
-  float: right;
+  /* float: right; */
   color: ${TEXT_COLORS.BLACK};
 
   font-size: 14px;
@@ -177,7 +176,8 @@ export const Temperature = styled.label`
 export const WeatherTitle = styled.label`
   align-self: 'center';
   color: ${TEXT_COLORS.BLACK};
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 600;
   text-transform: capitalize;
   margin-top: -5%;
   text-wrap: nowrap;

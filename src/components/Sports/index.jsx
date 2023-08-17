@@ -97,20 +97,19 @@ export const Sports = () => {
                   <InnerForecastContainer>
                     {currentForecast?.map((forecast, index) => {
                       return (
-                        <>
+                        <div key={index}>
                           {
                             // index % 8 === 0 && index > 0
                             currentForecast[index - 1]?.localDate !==
                             currentForecast[index]?.localDate ? (
-                              <ForecastDate>
+                              <ForecastDate key={index + '-date'}>
                                 {forecast?.formattedDate}
                               </ForecastDate>
                             ) : (
                               <></>
                             )
                           }
-
-                          <RowForecastContainer key={index} res={index % 2}>
+                          <RowForecastContainer pair={index % 2}>
                             <ForecastTemperature>
                               {forecast?.celsiusTemperature}
                             </ForecastTemperature>
@@ -120,7 +119,7 @@ export const Sports = () => {
 
                             <ForecastImages src={forecast?.image} />
                           </RowForecastContainer>
-                        </>
+                        </div>
                       )
                     })}
                   </InnerForecastContainer>
