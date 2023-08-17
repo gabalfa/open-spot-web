@@ -456,7 +456,6 @@ var r="ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),i
   /* border-bottom: 1px solid ${me.BLUE_OWN}; */
   /* margin-left: 45px; */
   width: 100%;
-  margin-top: 6px;
 `,yL=W.div`
   display: grid;
   overflow: auto;
