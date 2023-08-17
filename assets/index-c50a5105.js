@@ -462,7 +462,7 @@ var r="ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),i
 `,yL=W.div`
   display: grid;
   overflow: auto;
-  height: 70px;
+  height: 80px;
   width: 100%;
   /* margin-top: 10px; */
   padding: 0 5px 0 10px;
