@@ -36,21 +36,20 @@ export const NewSpot = () => {
             styles: {
               input: (provided) => ({
                 ...provided,
-                fontSize: '14px',
+                fontSize: '12px',
                 color: TEXT_COLORS.BLACK,
                 height: '30px',
               }),
               option: (provided) => ({
                 ...provided,
                 fontSize: '12px',
-                color: TEXT_COLORS.HEADER,
-                height: '50px',
-                borderBottom: `1px solid #9699aa`,
+                color: TEXT_COLORS.BLACK,
+                height: 'auto',
               }),
               singleValue: (provided) => ({
                 ...provided,
-                fontSize: '16px',
-                color: TEXT_COLORS.HEADER,
+                fontSize: '12px',
+                color: TEXT_COLORS.BLUE_OWN,
               }),
             },
           }}
