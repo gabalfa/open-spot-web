@@ -98,7 +98,9 @@ export const TemperatureContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  background-color: #bee0ec;
+  border-radius: 8px;
 `
 
 export const ForecastContainer = styled.div`
@@ -108,6 +110,7 @@ export const ForecastContainer = styled.div`
   /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   /* margin-left: 45px; */
   width: 100%;
+  /* margin-top: 6px; */
 `
 
 export const InnerForecastContainer = styled.div`
@@ -115,13 +118,13 @@ export const InnerForecastContainer = styled.div`
   overflow: auto;
   height: 70px;
   width: 100%;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 0 5px 0 10px;
 `
 
 export const RowForecastContainer = styled.div`
   background-color: ${(props) =>
-    props.pair ? `${BACKGROUND_COLORS.DIVIDER}` : `${BACKGROUND_COLORS.BLANK}`};
+    props.pair ? `#bee0ec` : `${BACKGROUND_COLORS.BLANK}`};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,11 +135,8 @@ export const RowForecastContainer = styled.div`
 `
 export const ForecastTitle = styled.label`
   margin-left: 20px;
-  margin-bottom: 5px;
-  /* float: right; */
   color: ${TEXT_COLORS.BLACK};
-
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 `
 
