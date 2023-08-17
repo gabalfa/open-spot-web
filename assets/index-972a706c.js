@@ -447,7 +447,8 @@ var r="ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),i
 `,mL=W.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: start;
 `,gL=W.div`
   /* display: flex; */
 
