@@ -102,7 +102,9 @@ export const Sports = () => {
                             // index % 8 === 0 && index > 0
                             currentForecast[index - 1]?.localDate !==
                             currentForecast[index]?.localDate ? (
-                              <ForecastDate>{forecast?.localDate}</ForecastDate>
+                              <ForecastDate>
+                                {forecast?.formattedDate}
+                              </ForecastDate>
                             ) : (
                               <></>
                             )

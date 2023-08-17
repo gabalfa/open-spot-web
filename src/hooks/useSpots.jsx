@@ -1,6 +1,8 @@
 import { useContext, useEffect } from 'react'
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete'
 
+import moment from 'moment'
+
 import { GlobalContext } from '../context/Global'
 
 export function useSpots() {
@@ -92,7 +94,6 @@ export function useSpots() {
           const newList = list.map((forecast) => {
             const localDT = new Date()
             const utcTime = Number(forecast?.dt_txt.slice(11, 13))
-
             const gmtDiff = Number(localDT.toString().slice(28, 31))
             const diffTime = utcTime + gmtDiff
             const localTime = (diffTime > 0 ? diffTime : 24 + diffTime) + ':00'
@@ -103,7 +104,9 @@ export function useSpots() {
                 ? Number(forecast?.dt_txt.slice(8, 10)) - 1
                 : forecast?.dt_txt.slice(8, 10))
 
-            // console.log('localTime::', localTime + ' - ' + localDate)
+            moment.locale('es')
+            const formattedDate = moment(localDate).format('ll')
+            // console.log('localDt::', formattedDate)
 
             return {
               ...forecast,
@@ -112,6 +115,7 @@ export function useSpots() {
               )}°`,
               localTime,
               localDate,
+              formattedDate,
               image: `${URL_WEATHER_IMG}/img/wn/${forecast.weather[0].icon}@4x.png`,
             }
           })
