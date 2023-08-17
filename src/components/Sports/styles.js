@@ -108,7 +108,6 @@ export const ForecastContainer = styled.div`
   /* border-bottom: 1px solid ${TEXT_COLORS.BLUE_OWN}; */
   /* margin-left: 45px; */
   width: 100%;
-  margin-top: 6px;
 `
 
 export const InnerForecastContainer = styled.div`
